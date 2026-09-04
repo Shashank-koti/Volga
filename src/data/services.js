@@ -7,7 +7,7 @@ export const homeServices = [
     link: 'asset-management',
     stats: '1.8 GW+ Monitored',
     image: '/images/solar-asset-inspection.jpg',
-    tags: ['O&M Analytics', 'Yield Optimization', 'Contract Stewardship']
+    tags: ['Q&M Analytics', 'Yield Optimization', 'Contract Stewardship']
   },
   {
     id: 'rooftop-solutions',

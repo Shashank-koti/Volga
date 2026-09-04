@@ -133,21 +133,6 @@ export default function Contact({ onNavigate }) {
                     </span>
                   </div>
                 </div>
-
-                {/* Delhi Regional Office */}
-                <div className="p-5 rounded-2xl bg-neutral-50 border border-border flex items-start gap-4 hover:border-neutral-300 transition-colors group">
-                  <div className="w-12 h-12 rounded-xl bg-neutral-200 text-heading flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-muted uppercase tracking-wider block">
-                      Northern Regional Office
-                    </span>
-                    <span className="text-sm font-semibold text-heading block mt-0.5 leading-snug">
-                      {contactInfo.regionalOffice}
-                    </span>
-                  </div>
-                </div>
               </div>
 
               {/* Trust Badge */}

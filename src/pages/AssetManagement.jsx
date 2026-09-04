@@ -244,22 +244,6 @@ export default function AssetManagement({ onNavigate }) {
                     </div>
                   </div>
 
-                  <div className="space-y-1.5">
-                    <div className="flex justify-between text-xs">
-                      <span className="text-heading font-semibold">Volga Optimized Generation</span>
-                      <span className="font-mono text-emerald-600 font-bold">104.8% (+4.8% Yield)</span>
-                    </div>
-                    <div className="w-full h-3.5 rounded-full bg-neutral-100 overflow-hidden p-0.5 border border-neutral-200">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: '100%' }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, ease: 'easeOut' }}
-                        className="h-full bg-gradient-to-r from-secondary to-primary rounded-full"
-                      />
-                    </div>
-                  </div>
-
                   {/* Telemetry Matrix Grid */}
                   <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border text-xs">
                     <div className="p-3 rounded-lg bg-neutral-50 border border-border">

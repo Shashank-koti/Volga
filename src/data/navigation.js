@@ -43,8 +43,7 @@ export const contactInfo = {
   phone: '+91 98200 12345',
   phoneDisplay: '+91 98200 12345',
   email: 'info@volgasolar.com',
-  corporateOffice: 'Level 14, Volga Tower, Bandra Kurla Complex (BKC), Mumbai - 400051, India',
-  regionalOffice: 'Aerocity Hospitality District, New Delhi - 110037, India',
+  corporateOffice: 'Volga Solar Solutions Pvt Ltd, T-Hub Phase 2, 20, Inorbit Mall Rd, Vittal Rao Nagar, Madhapur, Hyderabad, Telangana, India, 500081',
   hours: 'Mon - Fri: 9:00 AM - 6:30 PM IST'
 };
 
