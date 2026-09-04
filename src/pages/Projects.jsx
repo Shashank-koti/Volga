@@ -115,12 +115,6 @@ export default function Projects({ onNavigate }) {
                         {project.category}
                       </span>
                     </div>
-
-                    <div className="absolute bottom-4 right-4">
-                      <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-primary text-white shadow-md">
-                        {project.capacity}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Body */}
@@ -169,9 +163,6 @@ export default function Projects({ onNavigate }) {
                       <span className="text-xs font-bold text-muted uppercase tracking-wider">
                         Scope: {project.scope}
                       </span>
-                      <div className="w-8 h-8 rounded-full bg-primary-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
                     </div>
                   </div>
                 </motion.div>

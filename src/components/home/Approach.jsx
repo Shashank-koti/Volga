@@ -75,11 +75,6 @@ export default function Approach() {
                   transition={{ duration: 0.3 }}
                   className="rounded-2xl bg-surface border border-border p-8 shadow-subtle hover:shadow-elevated transition-all flex flex-col justify-between group relative overflow-hidden"
                 >
-                  {/* Watermark large number */}
-                  <span className="absolute -top-4 -right-2 text-7xl font-black text-neutral-100/90 group-hover:text-primary-light transition-colors pointer-events-none select-none font-mono">
-                    {step.num}
-                  </span>
-
                   <div>
                     {/* Number and Icon Header */}
                     <div className="flex items-center justify-between mb-6">

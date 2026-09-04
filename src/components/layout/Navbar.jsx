@@ -38,7 +38,7 @@ export default function Navbar({ currentPage, onNavigate }) {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-subtle border-b border-border/70 py-2.5 sm:py-3"
+        className="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-subtle border-b border-border/70 py-2.5 sm:py-3"
       >
         <Container size="full" className="px-4 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between">
@@ -68,7 +68,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                     >
                       <button
                         onClick={() => onNavigate('asset-management')}
-                        className={`px-3.5 py-2 rounded-lg text-md font-bold flex items-center gap-1.5 transition-colors ${isCurrentServicePage
+                        className={`px-3.5 py-2 rounded-lg text-md font-semibold flex items-center gap-1.5 transition-colors ${isCurrentServicePage
                           ? isNavSolid ? 'text-primary bg-primary-light' : 'text-white bg-white/15'
                           : isNavSolid
                             ? 'text-black hover:text-heading hover:bg-neutral-100'
