@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #D5000E;
+    --primary-dark: #A9000B;
+    --primary-light: #FFF0F1;
+
+    --secondary: #17BDE5;
+    --secondary-dark: #0A8FAF;
+    --secondary-light: #E6F9FD;
+
+    --accent: #FDDF02;
+    --accent-dark: #D9BE00;
+    --accent-light: #FFFBE0;
+
+    --heading: #17212B;
+    --text: #53606B;
+    --muted: #7B8790;
+
+    --background: #F7F8FA;
+    --surface: #FFFFFF;
+
+    --dark: #111827;
+    --border: #E5E7EB;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F3F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Energy Grid Background Pattern (Disabled) */
+.bg-grid-pattern {
+  background-image: none;
+}
+
+.bg-grid-pattern-dark {
+  background-image: none;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(23, 189, 229, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
