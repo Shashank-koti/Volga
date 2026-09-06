@@ -52,7 +52,7 @@ export default function About({ onNavigate }) {
       icon: ShieldCheck,
     },
     {
-      title: 'Long-Term Asset Value',
+      title: 'Long Term Asset Value',
       desc: 'Protecting and maximizing the capital and functional value of solar assets across their lifecycle.',
       icon: Zap,
     },
@@ -97,7 +97,7 @@ export default function About({ onNavigate }) {
               </p>
 
               <p className="text-sm sm:text-base text-body leading-relaxed">
-                We focus on delivering solutions that enhance plant performance, operational reliability, and long-term asset value.
+                We focus on delivering solutions that enhance plant performance, operational reliability, and long term asset value.
               </p>
 
               <div className="pt-2">
@@ -151,7 +151,7 @@ export default function About({ onNavigate }) {
               Our Strategic Focus
             </h2>
             <p className="mt-3 text-base text-body leading-relaxed">
-              We focus on delivering solutions that enhance plant performance, operational reliability, and long-term asset value.
+              We focus on delivering solutions that enhance plant performance, operational reliability, and long term asset value.
             </p>
           </div>
 

@@ -15,13 +15,13 @@ export const navLinks = [
       {
         name: 'Rooftop CAPEX',
         path: 'rooftop-capex',
-        description: 'End-to-end EPC services for commercial and industrial rooftop solar installations.',
+        description: 'End to end EPC services for commercial and industrial rooftop solar installations.',
         icon: 'Sun'
       },
       {
         name: 'Rooftop OPEX',
         path: 'rooftop-opex',
-        description: 'Zero-investment solar power solutions enabling businesses to adopt renewable energy with predictable electricity costs.',
+        description: 'Zero investment solar power solutions enabling businesses to adopt renewable energy with predictable electricity costs.',
         icon: 'Zap'
       },
       {
@@ -57,8 +57,8 @@ export const footerLinks = {
   ],
   services: [
     { name: 'Asset Management', path: 'asset-management' },
-    { name: 'Rooftop Solar – CAPEX', path: 'rooftop-capex' },
-    { name: 'Rooftop Solar – OPEX', path: 'rooftop-opex' },
+    { name: 'Rooftop Solar CAPEX', path: 'rooftop-capex' },
+    { name: 'Rooftop Solar OPEX', path: 'rooftop-opex' },
     { name: 'Battery Energy Storage Systems (BESS)', path: 'bess' },
     { name: 'Procurement', path: 'procurement' },
   ],

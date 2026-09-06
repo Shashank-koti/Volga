@@ -60,7 +60,7 @@ export default function AboutPreview({ onNavigate }) {
             </p>
 
             <p className="text-sm sm:text-base text-body leading-relaxed">
-              We focus on delivering solutions that enhance plant performance, operational reliability, and long-term asset value.
+              We focus on delivering solutions that enhance plant performance, operational reliability, and long term asset value.
             </p>
 
             {/* Expertise pills */}

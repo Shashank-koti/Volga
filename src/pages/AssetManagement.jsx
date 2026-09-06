@@ -31,7 +31,7 @@ export default function AssetManagement({ onNavigate }) {
       <PageHero
         title="Solar Asset Management"
         highlight="Asset Management"
-        description="Volga Solar Solutions provides specialized solar asset management services designed to maximize energy generation and protect the long-term value of solar investments."
+        description="Volga Solar Solutions provides specialized solar asset management services designed to maximize energy generation and protect the long term value of solar investments."
         onNavigate={onNavigate}
       />
 

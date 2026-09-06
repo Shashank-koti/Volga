@@ -31,7 +31,7 @@ export default function Procurement({ onNavigate }) {
       <PageHero
         title="Equipment Procurement"
         highlight="Procurement"
-        description="A structured procurement approach focused on quality, reliability, and long-term performance."
+        description="A structured procurement approach focused on quality, reliability, and long term performance."
         onNavigate={onNavigate}
       />
 

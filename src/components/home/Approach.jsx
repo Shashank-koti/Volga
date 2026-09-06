@@ -16,12 +16,12 @@ export default function Approach() {
     {
       num: '02',
       title: 'Performance Optimization',
-      desc: 'Data-driven insights help maximise energy generation.',
+      desc: 'Data driven insights help maximise energy generation.',
       icon: Cpu,
     },
     {
       num: '03',
-      title: 'Long-Term Reliability',
+      title: 'Long Term Reliability',
       desc: 'We ensure solar assets perform efficiently throughout their lifecycle.',
       icon: Clock,
     }

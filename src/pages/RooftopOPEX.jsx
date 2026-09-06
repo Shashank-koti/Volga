@@ -40,7 +40,7 @@ export default function RooftopOPEX({ onNavigate }) {
                 Zero Upfront Investment
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-heading leading-tight">
-                Zero-Capital Solar Energy
+                Zero Capital Solar Energy
               </h2>
               <p className="text-base sm:text-lg text-body leading-relaxed">
                 {rooftopOpexData.subIntro}
