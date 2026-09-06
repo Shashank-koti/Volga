@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from './Container';
 import { fadeUp } from '../../utils/animations';
-import image from '/images/page-hero-backdrop.jpg';
+import defaultHeroImage from '/images/page-hero-backdrop.jpg';
 
 export default function PageHero({
   title,
   highlight,
   description,
+  image,
   onNavigate,
 }) {
   const renderTitle = () => {
@@ -33,7 +34,7 @@ export default function PageHero({
       {/* Background image with clean subtle opacity */}
       <div className="absolute inset-0 z-0">
         <img
-          src={image}
+          src={image || defaultHeroImage}
           alt="Solar Background"
           className="w-full h-full object-cover object-center"
         />

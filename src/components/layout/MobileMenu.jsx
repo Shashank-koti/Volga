@@ -163,7 +163,7 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
                 icon={ArrowRight}
                 onClick={() => handleNavClick('contact')}
               >
-                Talk to Our Experts
+                Contact Us
               </Button>
 
               <div className="pt-2 space-y-2 text-xs text-muted">

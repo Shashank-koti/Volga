@@ -94,7 +94,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                             className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-elevated border border-border p-3 z-50 overflow-hidden"
                           >
                             <div className="text-[10px] uppercase font-bold tracking-wider text-muted px-3 py-1.5 border-b border-neutral-100 mb-1">
-                              Energy Capabilities
+                              Our Services
                             </div>
                             <div className="space-y-1">
                               {link.children.map((child) => {
@@ -169,7 +169,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                 onClick={() => onNavigate('contact')}
                 className="hidden sm:inline-flex"
               >
-                Talk to Our Experts
+                Contact Us
               </Button>
 
               <button

@@ -1,203 +1,152 @@
-export const homeServices = [
+export const servicesList = [
   {
     id: 'asset-management',
-    title: 'Solar Asset Management',
-    shortDesc: 'Comprehensive operational, technical, and commercial stewardship to maximize power output and preserve asset longevity.',
-    icon: 'Activity',
+    title: 'Asset Management',
+    desc: 'Comprehensive management of solar assets, including performance monitoring, operational oversight, and reporting.',
     link: 'asset-management',
-    stats: '1.8 GW+ Monitored',
-    image: '/images/solar-asset-inspection.jpg',
-    tags: ['Q&M Analytics', 'Yield Optimization', 'Contract Stewardship']
+    icon: 'Activity'
   },
   {
-    id: 'rooftop-solutions',
-    title: 'Rooftop Solar Solutions',
-    shortDesc: 'Turnkey industrial and commercial rooftop deployments engineered for rapid payback and maximum generation density.',
-    icon: 'Sun',
+    id: 'rooftop-capex',
+    title: 'Rooftop Solar – CAPEX',
+    desc: 'End-to-end EPC services for commercial and industrial rooftop solar installations.',
     link: 'rooftop-capex',
-    stats: '450+ MW Installed',
-    image: '/images/rooftop-capex.jpg',
-    tags: ['CAPEX Model', 'OPEX / PPA', 'C&I Facilities']
+    icon: 'Sun'
   },
   {
-    id: 'bess',
-    title: 'Battery Energy Storage Systems',
-    shortDesc: 'Utility-scale and behind-the-meter containerized BESS delivering peak shaving, frequency response, and 24/7 resilience.',
-    icon: 'BatteryCharging',
-    link: 'bess',
-    stats: '250 MWh Engineered',
-    image: '/images/bess-storage.jpg',
-    tags: ['Grid Firming', 'Peak Shaving', 'Microgrids']
-  },
-  {
-    id: 'procurement',
-    title: 'Renewable Energy Procurement',
-    shortDesc: 'Global Tier-1 procurement and equipment quality benchmarking ensuring bankable components across the project lifecycle.',
-    icon: 'ShieldCheck',
-    link: 'procurement',
-    stats: '100% Tier-1 Certified',
-    image: '/images/solar-procurement.jpg',
-    tags: ['Direct Sourcing', 'Stringent QA/QC', 'Bespoke Logistics']
-  }
-];
-
-export const assetManagementDetails = {
-  technical: [
-    {
-      title: 'Performance Monitoring & Analytics',
-      desc: 'Real-time telemetry and SCADA integration tracking PR (Performance Ratio), CUF, string current anomalies, and soiling indices.',
-      icon: 'Gauge'
-    },
-    {
-      title: 'Preventive & Corrective Maintenance',
-      desc: 'Scheduled thermography, IV curve tracing, torque audits, and rapid SLA-bound corrective dispatch teams.',
-      icon: 'Wrench'
-    },
-    {
-      title: 'Vendor & Contractor Management',
-      desc: 'Warranty claim enforcement, Tier-1 OEM service management, and rigorous contractor compliance oversight.',
-      icon: 'Users'
-    },
-    {
-      title: 'Plant Performance Benchmarking',
-      desc: 'Cross-portfolio comparative benchmarking against irradiation data, weather forecasts, and historical generation curves.',
-      icon: 'BarChart3'
-    }
-  ],
-  commercial: [
-    {
-      title: 'Energy Generation Verification',
-      desc: 'Independent reconciliation of metered generation against statutory DISCOM transmission logs and open access meters.',
-      icon: 'FileCheck2'
-    },
-    {
-      title: 'Revenue Reconciliation',
-      desc: 'PPA billing auditing, tariff indexing verification, late payment surcharge calculations, and off-taker billing compliance.',
-      icon: 'Coins'
-    },
-    {
-      title: 'Compliance & Regulatory Monitoring',
-      desc: 'Continuous tracking of CEA guidelines, forecasting & scheduling (F&S) DSM regulations, and statutory filing norms.',
-      icon: 'Scale'
-    },
-    {
-      title: 'Stakeholder & Investor Reporting',
-      desc: 'Bank-grade monthly, quarterly, and annual technical and financial performance dossiers tailored for lenders and equity sponsors.',
-      icon: 'ClipboardList'
-    }
-  ],
-  optimizationPoints: [
-    {
-      metric: '+4.8%',
-      label: 'Average Generation Uplift',
-      desc: 'Achieved through predictive soiling schedules and automated MPPT algorithm recalibration.'
-    },
-    {
-      metric: '99.4%',
-      label: 'Plant Availability Index',
-      desc: 'Maintained across all managed assets with proactive component health surveillance.'
-    },
-    {
-      metric: '< 2 Hrs',
-      label: 'Mean Critical Response Time',
-      desc: 'Guaranteed resolution dispatch through our central operations command centre.'
-    }
-  ]
-};
-
-export const capexEPCSteps = [
-  {
-    step: '01',
-    title: 'Site Assessment & Feasibility',
-    desc: '3D shadow analysis, structural load testing, wind speed compliance, and localized solar irradiance modeling.'
-  },
-  {
-    step: '02',
-    title: 'System Design & Engineering',
-    desc: 'BIM-guided layout, string matching, cable sizing, and lightning protection systems engineered to global IEC benchmarks.'
-  },
-  {
-    step: '03',
-    title: 'Procurement of Equipment',
-    desc: 'Direct sourcing of Tier-1 bifacial modules, string/central inverters, and hot-dip galvanized mounting structures.'
-  },
-  {
-    step: '04',
-    title: 'Installation & Commissioning',
-    desc: 'Execution by certified solar technicians, rigorous pre-commissioning flash tests, and cold/hot commissioning.'
-  },
-  {
-    step: '05',
-    title: 'Grid Connectivity & Approvals',
-    desc: 'End-to-end statutory liaising, CEIG inspection clearance, net-metering approvals, and bi-directional meter synchronization.'
-  }
-];
-
-export const opexSteps = [
-  {
-    step: '01',
-    title: 'Design & Funded Installation',
-    desc: 'Volga finances 100% of the project capital, engineering, and turnkey installation on your commercial or industrial rooftop.'
-  },
-  {
-    step: '02',
-    title: 'Volga Owns & Operates Asset',
-    desc: 'Our certified engineering team handles continuous 25-year O&M, insurance, component replacements, and performance risks.'
-  },
-  {
-    step: '03',
-    title: 'Pay Only for Power Consumed',
-    desc: 'You purchase the green solar kilowatt-hours produced at a pre-agreed tariff typically 25% to 45% below grid power rates.'
-  }
-];
-
-export const bessApplications = [
-  {
-    title: 'Renewable Energy Integration',
-    desc: 'Smooth out solar intermittency, curtailment mitigation, and firm solar output into predictable base-load power.',
-    icon: 'Layers'
-  },
-  {
-    title: 'Peak Load Management',
-    desc: 'Discharge stored low-cost energy during premium tariff intervals to eliminate maximum demand charges.',
-    icon: 'TrendingUp'
-  },
-  {
-    title: 'Backup Power Solutions',
-    desc: 'Seamless millisecond transfer during grid outages, replacing noisy diesel generators with zero-emission clean power.',
-    icon: 'Shield'
-  },
-  {
-    title: 'Grid Stabilization',
-    desc: 'Provide primary frequency response, reactive power support (VAR support), and synthetic inertia to the transmission grid.',
-    icon: 'Cpu'
-  }
-];
-
-export const procurementCategories = [
-  {
-    name: 'Solar Photovoltaic Modules',
-    spec: 'N-Type TOPCon & Heterojunction (HJT) bifacial modules with efficiencies exceeding 22.5% and low degradation warranties.',
-    icon: 'Grid'
-  },
-  {
-    name: 'Solar Grid-Tied Inverters',
-    spec: 'Tier-1 string and central inverters with high MPPT efficiency, integrated PID recovery, and advanced AFCI fire protection.',
+    id: 'rooftop-opex',
+    title: 'Rooftop Solar – OPEX',
+    desc: 'Zero-investment solar power solutions enabling businesses to adopt renewable energy with predictable electricity costs.',
+    link: 'rooftop-opex',
     icon: 'Zap'
   },
   {
-    name: 'Module Mounting Structures',
-    spec: 'High-yield pre-galvanized & hot-dip zinc-aluminum-magnesium (ZAM) coated steel with 25-year corrosion guarantees.',
-    icon: 'Box'
+    id: 'bess-capex',
+    title: 'Battery Energy Storage Systems (BESS) - CAPEX',
+    desc: 'Energy storage solutions supporting renewable integration and grid reliability.',
+    link: 'bess',
+    icon: 'BatteryCharging'
   },
   {
-    name: 'Electrical Balance of Systems (BOS)',
-    spec: 'HT switchgear, solar DC/AC cables, dry-type step-up transformers, SCADA sensors, and class-1 surge protection.',
-    icon: 'Sliders'
-  },
-  {
-    name: 'Battery Energy Storage Systems',
-    spec: 'UL9540A certified Lithium Iron Phosphate (LFP) rack-mounted enclosures, liquid thermal cooling, and advanced BMS.',
+    id: 'bess-opex',
+    title: 'Battery Energy Storage Systems (BESS) - OPEX',
+    desc: 'Zero-investment storage solutions delivering resilience, peak load management, and grid reliability.',
+    link: 'bess',
     icon: 'BatteryCharging'
   }
 ];
+
+export const assetManagementData = {
+  title: 'Solar Asset Management',
+  intro: 'Volga Solar Solutions provides specialized solar asset management services designed to maximize energy generation and protect the long-term value of solar investments.',
+  approach: 'Our asset management approach combines technical expertise, operational oversight, and performance analytics.',
+  technical: {
+    title: 'Technical Asset Management',
+    intro: 'Our services include:',
+    items: [
+      'Performance monitoring and analytics',
+      'Preventive and corrective maintenance coordination',
+      'Vendor and contractor management',
+      'Plant performance benchmarking'
+    ]
+  },
+  commercial: {
+    title: 'Commercial Asset Management',
+    intro: 'We ensure accurate tracking and reporting of plant performance and revenues.',
+    servicesIntro: 'Services include:',
+    items: [
+      'Energy generation verification',
+      'Revenue reconciliation',
+      'Compliance monitoring',
+      'Stakeholder reporting'
+    ]
+  },
+  optimization: {
+    title: 'Performance Optimization',
+    desc: 'Through detailed analysis of plant data, we identify opportunities to improve performance and minimize generation losses.'
+  }
+};
+
+export const rooftopCapexData = {
+  title: 'Rooftop Solar – CAPEX Model',
+  intro: 'Under the CAPEX model, Volga Solar Solutions designs and installs rooftop solar systems where the customer owns the asset and benefits from long-term energy savings.',
+  subIntro: 'We deliver end-to-end EPC solutions ensuring high-quality engineering and efficient project execution.',
+  scope: [
+    'Site assessment and feasibility analysis',
+    'Solar system design and engineering',
+    'Procurement of high-quality equipment',
+    'Installation and commissioning',
+    'Grid connectivity and approvals'
+  ],
+  benefits: [
+    'Reduced electricity costs',
+    'Attractive long-term return on investment',
+    'Clean and sustainable energy generation',
+    'Energy cost stability'
+  ]
+};
+
+export const rooftopOpexData = {
+  title: 'Rooftop Solar – OPEX Model',
+  intro: 'The OPEX model allows businesses to adopt solar power without investing capital in the solar installation.',
+  subIntro: 'Volga Solar Solutions installs and owns the solar plant while the customer purchases electricity generated by the system.',
+  howItWorks: [
+    'System design and installation by Volga Solar Solutions',
+    'Volga owns and operates the system',
+    'The customer pays only for the electricity generated'
+  ],
+  benefits: [
+    'No upfront investment',
+    'Immediate electricity cost savings',
+    'Zero maintenance responsibility',
+    'Predictable long-term energy costs'
+  ]
+};
+
+export const bessData = {
+  title: 'Battery Energy Storage Systems',
+  intro: 'Battery Energy Storage Systems play a critical role in enabling the integration of renewable energy into modern power systems.',
+  subIntro: 'Volga Solar Solutions provides solutions for the design, integration, and management of battery energy storage systems.',
+  applications: [
+    'Renewable energy integration',
+    'Peak load management',
+    'Backup power solutions',
+    'Grid stabilization'
+  ],
+  capabilities: [
+    'System design and engineering',
+    'Battery system integration',
+    'Monitoring and control systems',
+    'Operations and maintenance'
+  ]
+};
+
+export const procurementData = {
+  title: 'Procurement Philosophy',
+  intro: 'Volga Solar Solutions follows a structured procurement approach focused on quality, reliability, and long-term performance.',
+  subIntro: 'We work with trusted manufacturers and suppliers across the renewable energy ecosystem.',
+  categories: [
+    'Solar modules',
+    'Inverters',
+    'Mounting structures',
+    'Electrical equipment',
+    'Battery storage systems'
+  ],
+  vendorPartnerships: {
+    title: 'Vendor Partnerships',
+    text: 'We welcome partnerships with suppliers who meet our technical and quality standards.',
+    ctaText: 'Suppliers interested in working with us may contact our procurement team through the contact page.'
+  }
+};
+
+export const rooftopCallout = {
+  title: 'Rooftop Solar Solutions',
+  tagline: 'Solar rooftop is not a requirement but an essential.',
+  action: 'Reduced Power Bills Now',
+  instructions: 'Get a solar rooftop by choosing any one of the two options below:',
+  options: [
+    { title: 'Rooftop Solar OPEX', link: 'rooftop-opex' },
+    { title: 'Rooftop Solar CAPEX', link: 'rooftop-capex' }
+  ]
+};
+

@@ -2,70 +2,77 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '../components/common/Container';
 import PageHero from '../components/common/PageHero';
-import SectionHeading from '../components/common/SectionHeading';
+import Button from '../components/common/Button';
 import { fadeUp, staggerContainer, fadeLeft, fadeRight } from '../utils/animations';
 import {
-  Award,
-  ShieldCheck,
-  TrendingUp,
-  Leaf,
-  Users,
-  Target,
-  CheckCircle2,
+  Activity,
+  Briefcase,
+  Wrench,
   Cpu,
-  Compass,
+  BarChart3,
+  TrendingUp,
+  ShieldCheck,
+  Zap,
+  ArrowRight,
 } from 'lucide-react';
 
 export default function About({ onNavigate }) {
-  const values = [
+  const expertiseAreas = [
     {
-      title: 'Expertise',
-      desc: 'Decades of multi-gigawatt engineering acumen, deep domain knowledge in PV string dynamics, SCADA telemetry, and grid code compliance.',
-      icon: Award,
-      badge: 'Knowledge Driven',
+      title: 'Solar Asset Management',
+      icon: Activity,
     },
     {
-      title: 'Reliability',
-      desc: 'Predictable energy yield through rigorous ISO preventive maintenance, 99.4% guaranteed uptime SLAs, and zero-compromise safety protocols.',
-      icon: ShieldCheck,
-      badge: 'Unwavering SLAs',
+      title: 'Project Management',
+      icon: Briefcase,
     },
     {
-      title: 'Performance',
-      desc: 'Optimizing the levelized cost of energy (LCOE) through algorithmic analytics, proactive soiling management, and rapid field intervention.',
-      icon: TrendingUp,
-      badge: 'Data Optimized',
+      title: 'Operations',
+      icon: Wrench,
     },
     {
-      title: 'Sustainability',
-      desc: 'Accelerating the global transition away from carbon-intensive fuels while safeguarding local biodiversity and social community vitality.',
-      icon: Leaf,
-      badge: 'Net-Zero Impact',
+      title: 'Engineering',
+      icon: Cpu,
+    },
+    {
+      title: 'Performance Analytics',
+      icon: BarChart3,
     },
   ];
 
-  const pillars = [
-    'Solar Asset Management',
-    'Project Management & Turnkey EPC',
-    'Operations & Preventive Maintenance',
-    'Engineering & Grid Interconnection',
-    'Telemetry & Performance Analytics',
+  const focusPoints = [
+    {
+      title: 'Plant Performance',
+      desc: 'Delivering solutions that enhance plant performance and generation efficiency.',
+      icon: TrendingUp,
+    },
+    {
+      title: 'Operational Reliability',
+      desc: 'Structured engineering and maintenance ensuring dependable operational reliability.',
+      icon: ShieldCheck,
+    },
+    {
+      title: 'Long-Term Asset Value',
+      desc: 'Protecting and maximizing the capital and functional value of solar assets across their lifecycle.',
+      icon: Zap,
+    },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Hero */}
       <PageHero
-        title="About Volga Solar Solutions"
-        highlight="Volga Solar"
-        description="Pioneering integrated renewable energy stewardship across the entire lifecycle of utility-scale and commercial solar power assets."
+        title="About Us"
+        highlight="About"
+        description="Volga Solar Solutions provides integrated renewable energy services across the lifecycle of solar power assets."
         onNavigate={onNavigate}
       />
 
-      {/* Storytelling & Mission Section */}
+      {/* Main Narrative Section */}
       <section className="py-24 bg-white relative">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Content */}
             <motion.div
               variants={fadeLeft}
               initial="hidden"
@@ -73,42 +80,62 @@ export default function About({ onNavigate }) {
               viewport={{ once: true, margin: '-60px' }}
               className="lg:col-span-6 space-y-6"
             >
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-heading tracking-tight leading-tight">
-                Empowering Clean Energy with Engineering Precision
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary">
+                About Volga Solar Solutions
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-heading tracking-tight leading-tight">
+                Integrated Renewable Energy Services
               </h2>
 
-              <p className="text-base sm:text-lg text-body leading-relaxed">
-                Volga Solar Solutions provides integrated renewable energy services across the lifecycle of solar power assets. Founded by seasoned clean-energy technologists and project veterans, we recognized that generating power is only the first step—preserving asset health, optimizing generation ratio, and assuring bankable revenue streams are where true value is unlocked.
+              <p className="text-base sm:text-lg text-body leading-relaxed font-medium">
+                Volga Solar Solutions provides integrated renewable energy services across the lifecycle of solar power assets.
               </p>
 
               <p className="text-sm sm:text-base text-body leading-relaxed">
-                Our team combines deep expertise in:
+                Our team combines deep expertise in solar asset management, project management, operations, engineering, and performance analytics, enabling us to support asset owners and businesses in achieving reliable and efficient clean energy generation.
               </p>
 
-              <div className="space-y-2.5 pt-1">
-                {pillars.map((pillar, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm font-semibold text-heading">
-                    <div className="w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                    </div>
-                    <span>{pillar}</span>
-                  </div>
-                ))}
+              <p className="text-sm sm:text-base text-body leading-relaxed">
+                We focus on delivering solutions that enhance plant performance, operational reliability, and long-term asset value.
+              </p>
+
+              <div className="pt-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-muted block mb-3">
+                  Our Team Expertise
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {expertiseAreas.map((item, idx) => {
+                    const Icon = item.icon;
+                    return (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-3 p-3 rounded-xl bg-neutral-50 border border-neutral-200/80 text-sm font-semibold text-heading"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center shrink-0">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <span>{item.title}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </motion.div>
 
+            {/* Right Image */}
             <motion.div
               variants={fadeRight}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
-              className="lg:col-span-6 relative"
+              className="lg:col-span-6"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-elevated border border-border">
                 <img
                   src="/images/solar-asset-inspection.jpg"
-                  alt="Volga Solar Field Engineers and Asset Inspection"
-                  className="w-full h-[480px] sm:h-[520px] object-cover"
+                  alt="Volga Solar Solutions Field Engineers"
+                  className="w-full h-[480px] sm:h-[540px] object-cover"
                 />
               </div>
             </motion.div>
@@ -116,113 +143,67 @@ export default function About({ onNavigate }) {
         </Container>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-20 bg-background relative overflow-hidden border-y border-border">
+      {/* Focus Pillars Section */}
+      <section className="py-24 bg-neutral-50 relative border-t border-border">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Mission */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="p-8 sm:p-10 rounded-3xl bg-surface border border-border shadow-subtle flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
-                  <Compass className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-heading">Our Mission</h3>
-                <p className="mt-4 text-base text-body leading-relaxed">
-                  To deliver reliable, highly efficient, and long-term clean energy solutions that protect client capital, minimize operational downtime, and empower industries with clean, affordable power.
-                </p>
-              </div>
-              <div className="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-2 text-xs font-bold text-primary">
-                <span>RELIABILITY &bull; INTEGRITY &bull; VALUE</span>
-              </div>
-            </motion.div>
-
-            {/* Vision */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
-              className="p-8 sm:p-10 rounded-3xl bg-surface border border-border shadow-subtle flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-secondary-light text-secondary flex items-center justify-center mb-6">
-                  <Cpu className="w-6 h-6" />
-                </div>
-                <h3 className="text-2xl font-bold text-heading">Our Vision</h3>
-                <p className="mt-4 text-base text-body leading-relaxed">
-                  To be the most trusted renewable energy services platform across Asia, setting benchmark standards for solar asset stewardship, battery storage integration, and industrial decarbonization.
-                </p>
-              </div>
-              <div className="mt-8 pt-6 border-t border-neutral-100 flex items-center gap-2 text-xs font-bold text-secondary">
-                <span>INNOVATION &bull; DECARBONIZATION &bull; FUTURE</span>
-              </div>
-            </motion.div>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-heading">
+              Our Strategic Focus
+            </h2>
+            <p className="mt-3 text-base text-body leading-relaxed">
+              We focus on delivering solutions that enhance plant performance, operational reliability, and long-term asset value.
+            </p>
           </div>
-        </Container>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-24 bg-white relative">
-        <Container>
-          <SectionHeading
-            badge="Guiding Principles"
-            title="Our Core Values"
-            highlight="Values"
-            subtitle="The fundamental tenets that guide our engineering decisions, client partnerships, and operational governance."
-            align="center"
-            className="mb-16"
-          />
 
           <motion.div
             variants={staggerContainer(0.12, 0.1)}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
           >
-            {values.map((val, idx) => {
-              const Icon = val.icon;
+            {focusPoints.map((point, idx) => {
+              const Icon = point.icon;
               return (
                 <motion.div
-                  key={val.title}
+                  key={idx}
                   variants={fadeUp}
                   whileHover={{ y: -6 }}
-                  className="p-6 rounded-2xl bg-surface border border-border shadow-subtle hover:shadow-elevated transition-all flex flex-col justify-between group"
+                  className="p-8 rounded-2xl bg-white border border-border shadow-subtle hover:shadow-elevated transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-neutral-100 text-heading group-hover:bg-primary group-hover:text-white transition-colors flex items-center justify-center">
-                        <Icon className="w-6 h-6" />
-                      </div>
+                    <div className="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center mb-6">
+                      <Icon className="w-6 h-6" />
                     </div>
-
-                    <h3 className="text-xl font-bold text-heading group-hover:text-primary transition-colors">
-                      {val.title}
+                    <h3 className="text-xl font-bold text-heading mb-3">
+                      {point.title}
                     </h3>
-                    <p className="mt-2.5 text-sm text-body leading-relaxed">
-                      {val.desc}
+                    <p className="text-sm text-body leading-relaxed">
+                      {point.desc}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-neutral-100">
-                    <span className="text-xs font-bold text-secondary group-hover:text-primary transition-colors flex items-center gap-1">
-                      <span>Principle 0{idx + 1}</span>
-                    </span>
+                  <div className="mt-8 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs font-bold text-primary">
+                    <span>Key Priority 0{idx + 1}</span>
                   </div>
                 </motion.div>
               );
             })}
           </motion.div>
+
+          <div className="mt-16 text-center">
+            <Button
+              variant="primary"
+              size="lg"
+              icon={ArrowRight}
+              onClick={() => onNavigate('contact')}
+            >
+              Contact Volga Solar Solutions
+            </Button>
+          </div>
         </Container>
       </section>
-
     </div>
   );
 }
+

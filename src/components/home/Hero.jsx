@@ -65,7 +65,7 @@ export default function Hero({ onNavigate }) {
               Volga Solar Solutions is a renewable energy services company specialising in{' '}
               <span className="text-white font-semibold">solar asset management</span>,{' '}
               <span className="text-white font-semibold">rooftop solar solutions</span>, and{' '}
-              <span className="text-white font-semibold">battery energy storage systems</span>.
+              <span className="text-white font-semibold">battery energy storage systems (BESS)</span>.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -79,14 +79,14 @@ export default function Hero({ onNavigate }) {
                 icon={ArrowRight}
                 onClick={scrollToExplore}
               >
-                Explore Our Solutions
+                Our Services
               </Button>
               <Button
                 variant="outline-white"
                 size="lg"
                 onClick={() => onNavigate('contact')}
               >
-                Talk to Our Experts
+                Contact Us
               </Button>
             </motion.div>
           </motion.div>
