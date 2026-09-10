@@ -169,7 +169,7 @@ export default function Navbar({ currentPage, onNavigate }) {
                 onClick={() => onNavigate('contact')}
                 className="hidden sm:inline-flex"
               >
-                Contact Us
+                Chat With Us
               </Button>
 
               <button

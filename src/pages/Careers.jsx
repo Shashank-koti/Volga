@@ -51,7 +51,6 @@ export default function Careers({ onNavigate }) {
             badge="Opportunities"
             title="Career Areas"
             highlight="Career Areas"
-            subtitle="Career areas include:"
             align="center"
             className="mb-14"
           />
@@ -75,9 +74,6 @@ export default function Careers({ onNavigate }) {
                   <div className="w-14 h-14 rounded-2xl bg-primary-light text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-200">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <span className="text-xs font-bold text-muted uppercase tracking-wider block mb-1">
-                    Area 0{idx + 1}
-                  </span>
                   <h3 className="text-lg font-bold text-heading group-hover:text-primary transition-colors">
                     {area.title}
                   </h3>

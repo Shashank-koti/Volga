@@ -2,13 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from './Container';
 import { fadeUp } from '../../utils/animations';
-import defaultHeroImage from '/images/page-hero-backdrop.jpg';
 
 export default function PageHero({
   title,
   highlight,
   description,
-  image,
   onNavigate,
 }) {
   const renderTitle = () => {
@@ -30,17 +28,7 @@ export default function PageHero({
   };
 
   return (
-    <div className="relative pt-32 pb-16 md:pt-36 md:pb-16 bg-neutral-50 overflow-hidden text-heading border-b border-border">
-      {/* Background image with clean subtle opacity */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={image || defaultHeroImage}
-          alt="Solar Background"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/40 to-neutral-50" />
-      </div>
-
+    <div className="relative pt-32 pb-16 md:pt-36 md:pb-16 bg-neutral-50 text-heading border-b border-border">
       <Container className="relative z-10">
         <div className="max-w-4xl">
           <motion.div

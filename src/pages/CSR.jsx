@@ -36,8 +36,7 @@ export default function CSR({ onNavigate }) {
       <PageHero
         title="Corporate Social Responsibility"
         highlight="Social Responsibility"
-        description="At Volga Solar Solutions, sustainability extends beyond renewable energy generation. We believe in contributing positively to society and supporting community development initiatives."
-        image="/images/csr-community.jpg"
+        description="At Volga Solar Solutions, sustainability extends beyond renewable energy generation."
         onNavigate={onNavigate}
       />
 
@@ -61,7 +60,7 @@ export default function CSR({ onNavigate }) {
               </h2>
 
               <p className="text-lg text-body leading-relaxed">
-                At Volga Solar Solutions, sustainability extends beyond renewable energy generation. We believe in contributing positively to society and supporting community development initiatives.
+                We believe in contributing positively to society and supporting community development initiatives.
               </p>
             </motion.div>
 
