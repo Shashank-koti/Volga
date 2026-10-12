@@ -1,32 +1,44 @@
 import React from 'react';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 import Hero from '../components/home/Hero';
-import ServicesOverview from '../components/home/ServicesOverview';
-import AboutPreview from '../components/home/AboutPreview';
-import RooftopCallout from '../components/home/RooftopCallout';
-import Approach from '../components/home/Approach';
-import BESSFeature from '../components/home/BESSFeature';
+import EnergyApproachComparison from '../components/home/EnergyApproachComparison';
+import RooftopAssemblySection from '../components/home/RooftopAssemblySection';
+import EnergyStorageSection from '../components/home/EnergyStorageSection';
+import CapexVsOpexSection from '../components/home/CapexVsOpexSection';
+import ConnectedEcosystemSection from '../components/home/ConnectedEcosystemSection';
 
 export default function Home({ onNavigate }) {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. Hero Section */}
-      <Hero onNavigate={onNavigate} />
+      {/* HERO: Cinematic Commercial Energy Video & Value Proposition */}
+      <ErrorBoundary>
+        <Hero onNavigate={onNavigate} />
+      </ErrorBoundary>
 
-      {/* 2. About Preview */}
-      <AboutPreview onNavigate={onNavigate} />
+      {/* 01: Traditional vs Solar — Split-Screen Comparison */}
+      <ErrorBoundary>
+        <EnergyApproachComparison onNavigate={onNavigate} />
+      </ErrorBoundary>
 
-      {/* 3. Services Overview */}
-      <ServicesOverview onNavigate={onNavigate} />
+      {/* 02: Rooftop to Renewable Power — Solar Panels Assemble on Factory */}
+      <ErrorBoundary>
+        <RooftopAssemblySection onNavigate={onNavigate} />
+      </ErrorBoundary>
 
-      {/* 4. Rooftop Solar Solutions Callout */}
-      <RooftopCallout onNavigate={onNavigate} />
+      {/* 04: Energy Storage — Battery Charges and Powers a Facility */}
+      <ErrorBoundary>
+        <EnergyStorageSection onNavigate={onNavigate} />
+      </ErrorBoundary>
 
-      {/* 5. Battery Energy Storage Systems Feature */}
-      <BESSFeature onNavigate={onNavigate} />
+      {/* 05: CAPEX vs OPEX — Interactive Business Model Comparison */}
+      <ErrorBoundary>
+        <CapexVsOpexSection onNavigate={onNavigate} />
+      </ErrorBoundary>
 
-      {/* 6. Our Approach */}
-      <Approach />
+      {/* 06: Connected Energy Ecosystem — All Volga Services Connect Together */}
+      <ErrorBoundary>
+        <ConnectedEcosystemSection onNavigate={onNavigate} />
+      </ErrorBoundary>
     </div>
   );
 }
-

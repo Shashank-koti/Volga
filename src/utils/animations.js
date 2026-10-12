@@ -66,3 +66,21 @@ export const cardHover = {
   rest: { y: 0, transition: { duration: 0.3, ease: 'easeOut' } },
   hover: { y: -8, transition: { duration: 0.3, ease: 'easeOut' } }
 };
+
+export const textReveal = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+  }
+};
+
+export const springUp = {
+  hidden: { opacity: 0, y: 35 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', damping: 25, stiffness: 200 }
+  }
+};

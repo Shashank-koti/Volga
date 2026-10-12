@@ -50,10 +50,10 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-            className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl flex flex-col overflow-y-auto lg:hidden"
+            className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-[#070A0F] z-50 shadow-2xl flex flex-col overflow-y-auto lg:hidden border-l border-white/10 text-white"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-5 border-b border-border bg-neutral-50/50">
+            <div className="flex items-center justify-between p-5 border-b border-white/10 bg-[#0A0E17]">
               <div className="flex items-center">
                 <img src="/navImg.png" alt="Volga Solar Solutions" className="h-9 w-auto object-contain" />
               </div>
@@ -61,7 +61,7 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
               <button
                 onClick={onClose}
                 aria-label="Close menu"
-                className="p-2 rounded-lg text-body hover:text-heading hover:bg-neutral-100 transition-colors"
+                className="p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -77,14 +77,14 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
                         onClick={() => setServicesExpanded(!servicesExpanded)}
                         className={`flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-sm font-bold transition-colors ${
                           ['asset-management', 'rooftop-capex', 'rooftop-opex', 'bess'].includes(currentPage)
-                            ? 'text-primary bg-primary-light/60'
-                            : 'text-heading hover:bg-neutral-100'
+                            ? 'text-primary bg-primary/15 border border-primary/25'
+                            : 'text-white hover:bg-white/5'
                         }`}
                       >
                         <span>{item.name}</span>
                         <ChevronDown
                           className={`w-4 h-4 transition-transform ${
-                            servicesExpanded ? 'rotate-180 text-primary' : 'text-muted'
+                            servicesExpanded ? 'rotate-180 text-primary' : 'text-neutral-400'
                           }`}
                         />
                       </button>
@@ -106,22 +106,22 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
                                   onClick={() => handleNavClick(sub.path)}
                                   className={`flex items-start gap-3 w-full text-left p-2.5 rounded-lg transition-colors text-xs ${
                                     isActive
-                                      ? 'bg-primary/10 text-primary font-semibold'
-                                      : 'text-body hover:text-heading hover:bg-neutral-50'
+                                      ? 'bg-primary/20 text-white font-semibold border border-primary/30'
+                                      : 'text-neutral-300 hover:text-white hover:bg-white/5'
                                   }`}
                                 >
                                   <div
                                     className={`p-1.5 rounded-md mt-0.5 ${
                                       isActive
                                         ? 'bg-primary text-white'
-                                        : 'bg-neutral-100 text-neutral-600'
+                                        : 'bg-white/10 text-neutral-300'
                                     }`}
                                   >
                                     <SubIcon className="w-3.5 h-3.5" />
                                   </div>
                                   <div>
-                                    <div className="font-semibold">{sub.name}</div>
-                                    <div className="text-[11px] text-muted line-clamp-1 mt-0.5">
+                                    <div className={`font-semibold ${isActive ? 'text-primary' : 'text-white'}`}>{sub.name}</div>
+                                    <div className="text-[11px] text-neutral-400 line-clamp-1 mt-0.5">
                                       {sub.description}
                                     </div>
                                   </div>
@@ -143,8 +143,8 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
                     onClick={() => handleNavClick(item.path)}
                     className={`flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'text-primary bg-primary-light/60 font-bold'
-                        : 'text-heading hover:bg-neutral-100'
+                        ? 'text-primary bg-primary/15 border border-primary/25 font-bold'
+                        : 'text-white hover:bg-white/5'
                     }`}
                   >
                     <span>{item.name}</span>
@@ -155,30 +155,30 @@ export default function MobileMenu({ isOpen, onClose, currentPage, onNavigate })
             </div>
 
             {/* CTA & Contact Info Footer */}
-            <div className="p-5 border-t border-border bg-neutral-50 space-y-4">
+            <div className="p-5 border-t border-white/10 bg-[#0A0E17] space-y-4">
               <Button
                 variant="primary"
                 size="md"
-                className="w-full"
+                className="w-full shadow-glow-red"
                 icon={ArrowRight}
                 onClick={() => handleNavClick('contact')}
               >
                 Contact Us
               </Button>
 
-              <div className="pt-2 space-y-2 text-xs text-muted">
+              <div className="pt-2 space-y-2 text-xs text-neutral-400">
                 <a
                   href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
-                  className="flex items-center gap-2 text-body hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-white hover:text-primary transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-secondary" />
+                  <Phone className="w-3.5 h-3.5 text-primary" />
                   <span>{contactInfo.phoneDisplay}</span>
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="flex items-center gap-2 text-body hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-white hover:text-primary transition-colors"
                 >
-                  <Mail className="w-3.5 h-3.5 text-secondary" />
+                  <Mail className="w-3.5 h-3.5 text-primary" />
                   <span>{contactInfo.email}</span>
                 </a>
               </div>

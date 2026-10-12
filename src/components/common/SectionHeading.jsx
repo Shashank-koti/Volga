@@ -27,7 +27,7 @@ export default function SectionHeading({
           part.toLowerCase() === highlight.toLowerCase() ? (
             <span
               key={index}
-              className={dark ? 'text-secondary' : 'text-primary relative inline-block'}
+              className="text-primary relative inline-block"
             >
               {part}
             </span>
@@ -47,19 +47,16 @@ export default function SectionHeading({
       viewport={{ once: true, margin: '-40px' }}
       className={`flex flex-col max-w-3xl ${alignments[align]} ${className}`}
     >
+
       <h2
-        className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] ${
-          dark ? 'text-white' : 'text-heading'
-        }`}
+        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-white"
       >
         {renderTitle()}
       </h2>
 
       {subtitle && (
         <p
-          className={`mt-4 text-base sm:text-lg leading-relaxed ${
-            dark ? 'text-neutral-300' : 'text-body'
-          }`}
+          className="mt-4 text-base sm:text-lg leading-relaxed text-neutral-300 font-normal"
         >
           {subtitle}
         </p>

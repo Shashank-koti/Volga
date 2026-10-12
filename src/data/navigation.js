@@ -9,25 +9,21 @@ export const navLinks = [
       {
         name: 'Asset Management',
         path: 'asset-management',
-        description: 'Comprehensive management of solar assets, including performance monitoring, operational oversight, and reporting.',
         icon: 'Activity'
       },
       {
         name: 'Rooftop CAPEX',
         path: 'rooftop-capex',
-        description: 'End to end EPC services for commercial and industrial rooftop solar installations.',
         icon: 'Sun'
       },
       {
         name: 'Rooftop OPEX',
         path: 'rooftop-opex',
-        description: 'Zero investment solar power solutions enabling businesses to adopt renewable energy with predictable electricity costs.',
         icon: 'Zap'
       },
       {
         name: 'Battery Energy Storage Systems',
         path: 'bess',
-        description: 'Energy storage solutions supporting renewable integration and grid reliability.',
         icon: 'BatteryCharging'
       }
     ]

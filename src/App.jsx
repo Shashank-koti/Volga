@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import TopBar from './components/layout/TopBar';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-
+import ErrorBoundary from './components/common/ErrorBoundary';
 // Pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -95,7 +94,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-body selection:bg-primary/10 selection:text-primary">
+    <div className="min-h-screen flex flex-col bg-background text-body selection:bg-primary selection:text-white">
 
       {/* 2. Premium Sticky Navigation */}
       <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
@@ -110,7 +109,9 @@ export default function App() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.28, ease: 'easeInOut' }}
           >
-            {renderPage()}
+            <ErrorBoundary>
+              {renderPage()}
+            </ErrorBoundary>
           </motion.div>
         </AnimatePresence>
       </main>
