@@ -34,9 +34,9 @@ export default function EnergyApproachComparison({ onNavigate }) {
       title: 'Traditional Grid Electricity',
       desc: '100% utility dependency with rising tariffs, heavy peak demand surcharges, and costly power outages.',
       icon: AlertTriangle,
-      accent: '#21D6B2',
-      accentBg: 'bg-emerald-500/10 text-[#21D6B2] border-[#21D6B2]/30',
-      activeBorder: 'border-[#21D6B2]/90 shadow-[0_0_24px_rgba(245,158,11,0.22)]',
+      accent: '#E25121',
+      accentBg: 'bg-[#E25121]/15 text-[#E25121] border-[#E25121]/30',
+      activeBorder: 'border-[#E25121]/90 shadow-[0_0_24px_rgba(226,81,33,0.3)]',
     },
     {
       id: 2,
@@ -45,9 +45,9 @@ export default function EnergyApproachComparison({ onNavigate }) {
       title: 'Modern Solar + Battery System',
       desc: 'Generate clean electricity on your factory roof, cutting power bills by up to 50% with battery backup during grid failures.',
       icon: Sun,
-      accent: '#21D6B2',
-      accentBg: 'bg-emerald-500/10 text-[#21D6B2] border-[#21D6B2]/30',
-      activeBorder: 'border-[#21D6B2]/90 shadow-[0_0_25px_rgba(33,214,178,0.28)]',
+      accent: '#19ABCF',
+      accentBg: 'bg-[#19ABCF]/15 text-[#19ABCF] border-[#19ABCF]/30',
+      activeBorder: 'border-[#19ABCF]/90 shadow-[0_0_25px_rgba(25,171,207,0.3)]',
     },
   ];
 
@@ -115,8 +115,8 @@ export default function EnergyApproachComparison({ onNavigate }) {
     >
       {/* Background Architectural Blueprint & Ambient Glows */}
       <div className="absolute inset-0 bg-blueprint-dark opacity-30 pointer-events-none" />
-      <div className="absolute top-1/4 left-0 w-[550px] h-[550px] bg-[#0B7285]/15 blur-[160px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-1/4 right-0 w-[550px] h-[550px] bg-[#1AA3B6]/12 blur-[170px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-0 w-[550px] h-[550px] bg-[#C0020F]/15 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/4 right-0 w-[550px] h-[550px] bg-[#19ABCF]/12 blur-[170px] pointer-events-none rounded-full" />
 
       <Container size="2xl" className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
@@ -135,7 +135,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
               className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-extrabold tracking-tight text-white leading-[1.14]"
             >
               Traditional Electricity{' '}
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1AA3B6] via-[#21D6B2] to-emerald-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#C0020F] via-[#E25121] to-[#19ABCF]">
                 vs. Modern Solar Energy
               </span>
             </motion.h2>
@@ -162,8 +162,8 @@ export default function EnergyApproachComparison({ onNavigate }) {
                     key={app.id}
                     onClick={() => jumpToApproach(idx)}
                     className={`group relative p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${isActive
-                      ? `bg-[#0A2622]/95 ${app.activeBorder}`
-                      : 'bg-[#081816]/65 border-white/10 hover:border-[#1AA3B6]/40 hover:bg-[#0B211E]/75'
+                      ? `bg-[#0E131F]/95 ${app.activeBorder}`
+                      : 'bg-[#0B0F17]/65 border-white/10 hover:border-white/20 hover:bg-[#0E131F]/75'
                       }`}
                   >
                     <div className="flex items-start gap-3.5">
@@ -208,16 +208,16 @@ export default function EnergyApproachComparison({ onNavigate }) {
           <div className="lg:col-span-7 xl:col-span-7">
             <div className="relative group">
               {/* Luxury Ambient Glow Behind Animation Box */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#0B7285]/20 via-[#1AA3B6]/25 to-[#21D6B2]/20 rounded-2xl lg:rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-[#C0020F]/20 via-[#E25121]/20 to-[#19ABCF]/20 rounded-2xl lg:rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               {/* Ultra-Clean Cinematic Viewport Container */}
               <div
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-[#1AA3B6]/30 bg-[#061B1A] shadow-[0_20px_60px_rgba(0,0,0,0.8)] cursor-pointer select-none"
+                className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/10 bg-[#0B0F17] shadow-[0_20px_60px_rgba(0,0,0,0.8)] cursor-pointer select-none"
                 title={isPlaying ? 'Click animation to Pause' : 'Click animation to Play'}
               >
                 {/* 16:9 Aspect Ratio SVG Stage */}
-                <div className="relative w-full aspect-video bg-[#051817] overflow-hidden">
+                <div className="relative w-full aspect-video bg-[#070A0F] overflow-hidden">
                   <svg
                     ref={svgRef}
                     viewBox="0 0 1920 1080"
@@ -227,66 +227,66 @@ export default function EnergyApproachComparison({ onNavigate }) {
                     <defs>
                       {/* Day / Dusk Environmental Gradients */}
                       <linearGradient id="skyGradDay" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#0B3934" />
-                        <stop offset="60%" stopColor="#082A26" />
-                        <stop offset="100%" stopColor="#051817" />
-                      </linearGradient>
-
-                      <linearGradient id="skyGradGrid" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#1E293B" />
-                        <stop offset="55%" stopColor="#0F172A" />
+                        <stop offset="0%" stopColor="#0B1320" />
+                        <stop offset="60%" stopColor="#080E18" />
                         <stop offset="100%" stopColor="#070A0F" />
                       </linearGradient>
 
-                      {/* Building Facade Gradients */}
+                      <linearGradient id="skyGradGrid" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#0B1320" />
+                        <stop offset="60%" stopColor="#080E18" />
+                        <stop offset="100%" stopColor="#070A0F" />
+                      </linearGradient>
+
+                      {/* Building Facade Gradients (Dark Tech Blueprint) */}
                       <linearGradient id="bldgFacadeDay" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#F8FBFC" />
-                        <stop offset="50%" stopColor="#E2E8F0" />
-                        <stop offset="100%" stopColor="#CBD5E1" />
+                        <stop offset="0%" stopColor="#0E1726" />
+                        <stop offset="50%" stopColor="#0B1320" />
+                        <stop offset="100%" stopColor="#070A0F" />
                       </linearGradient>
 
                       <linearGradient id="bldgFacadeGrid" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#475569" />
-                        <stop offset="50%" stopColor="#334155" />
-                        <stop offset="100%" stopColor="#1E293B" />
+                        <stop offset="0%" stopColor="#0D1522" />
+                        <stop offset="50%" stopColor="#09101C" />
+                        <stop offset="100%" stopColor="#070A0F" />
                       </linearGradient>
 
                       <linearGradient id="bldgRoofDay" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#0F4C44" />
-                        <stop offset="100%" stopColor="#09332D" />
+                        <stop offset="0%" stopColor="#0A1424" />
+                        <stop offset="100%" stopColor="#070E18" />
                       </linearGradient>
 
                       <linearGradient id="bldgRoofGrid" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#334155" />
-                        <stop offset="100%" stopColor="#1E293B" />
+                        <stop offset="0%" stopColor="#09101C" />
+                        <stop offset="100%" stopColor="#060B12" />
                       </linearGradient>
 
                       <linearGradient id="solarGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#155E75" />
-                        <stop offset="50%" stopColor="#0E7490" />
-                        <stop offset="100%" stopColor="#083344" />
+                        <stop offset="0%" stopColor="#0C2033" />
+                        <stop offset="50%" stopColor="#143657" />
+                        <stop offset="100%" stopColor="#081524" />
                       </linearGradient>
 
                       <linearGradient id="sunRayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#FDE047" stopOpacity="0.5" />
-                        <stop offset="100%" stopColor="#21D6B2" stopOpacity="0" />
+                        <stop offset="0%" stopColor="#E25121" stopOpacity="0.5" />
+                        <stop offset="100%" stopColor="#19ABCF" stopOpacity="0" />
                       </linearGradient>
 
                       <linearGradient id="sweepLaserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="transparent" />
-                        <stop offset="42%" stopColor="#1AA3B6" stopOpacity="0.3" />
+                        <stop offset="42%" stopColor="#C0020F" stopOpacity="0.4" />
                         <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.95" />
-                        <stop offset="58%" stopColor="#21D6B2" stopOpacity="0.8" />
+                        <stop offset="58%" stopColor="#19ABCF" stopOpacity="0.8" />
                         <stop offset="100%" stopColor="transparent" />
                       </linearGradient>
 
                       {/* Filters */}
-                      <filter id="neonGlowTeal" x="-30%" y="-30%" width="160%" height="160%">
+                      <filter id="neonGlowCyan" x="-30%" y="-30%" width="160%" height="160%">
                         <feGaussianBlur stdDeviation="6" result="blur" />
                         <feComposite in="SourceGraphic" in2="blur" operator="over" />
                       </filter>
 
-                      <filter id="amberGlow" x="-30%" y="-30%" width="160%" height="160%">
+                      <filter id="solarOrangeGlow" x="-30%" y="-30%" width="160%" height="160%">
                         <feGaussianBlur stdDeviation="5" result="blur" />
                         <feComposite in="SourceGraphic" in2="blur" operator="over" />
                       </filter>
@@ -301,9 +301,9 @@ export default function EnergyApproachComparison({ onNavigate }) {
 
                       {/* Solar Panel Monocrystalline Grid Pattern */}
                       <pattern id="pvGridPattern" width="34" height="22" patternUnits="userSpaceOnUse">
-                        <rect width="32" height="20" fill="#0E443C" stroke="#21D6B2" strokeWidth="0.8" />
-                        <line x1="16" y1="0" x2="16" y2="20" stroke="#1AA3B6" strokeWidth="0.5" strokeOpacity="0.8" />
-                        <line x1="0" y1="10" x2="32" y2="10" stroke="#1AA3B6" strokeWidth="0.5" strokeOpacity="0.8" />
+                        <rect width="32" height="20" fill="#0C1B2B" stroke="#19ABCF" strokeWidth="0.8" />
+                        <line x1="16" y1="0" x2="16" y2="20" stroke="#C0020F" strokeWidth="0.5" strokeOpacity="0.8" />
+                        <line x1="0" y1="10" x2="32" y2="10" stroke="#C0020F" strokeWidth="0.5" strokeOpacity="0.8" />
                       </pattern>
                     </defs>
 
@@ -318,7 +318,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
                     />
 
                     {/* Ground Horizon & Architectural Perspective Ground Plane */}
-                    <rect x="0" y="600" width="1920" height="480" fill={t < 4 ? '#090D16' : '#051817'} />
+                    <rect x="0" y="600" width="1920" height="480" fill={t < 4 ? '#090D16' : '#070A0F'} />
 
                     {/* Perspective Ground Grid */}
                     <g opacity="0.3">
@@ -329,7 +329,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           y1={600 + i * 28}
                           x2="1920"
                           y2={600 + i * 28}
-                          stroke={t < 4 ? '#334155' : '#144A40'}
+                          stroke="#1E293B"
                           strokeWidth="1"
                           strokeDasharray="4 8"
                         />
@@ -341,7 +341,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           y1="600"
                           x2={i * 65 - 180}
                           y2="1080"
-                          stroke={t < 4 ? '#334155' : '#144A40'}
+                          stroke="#1E293B"
                           strokeWidth="1"
                           strokeDasharray="4 8"
                         />
@@ -359,104 +359,104 @@ export default function EnergyApproachComparison({ onNavigate }) {
                       {/* Distant Substation Silhouette */}
                       <path
                         d="M0,610 Q200,580 400,600 T800,590 L800,700 L0,700 Z"
-                        fill="#0B132B"
+                        fill="#0B1320"
                         opacity="0.8"
                       />
 
                       {/* Transmission Tower 1 (Tall Left Lattice Pylon) */}
                       <g transform="translate(100, 240) scale(1.15)">
-                        <polygon points="50,0 70,0 95,360 25,360" fill="none" stroke="#64748B" strokeWidth="2.5" />
-                        <line x1="60" y1="0" x2="60" y2="360" stroke="#475569" strokeWidth="1.5" />
-                        <line x1="10" y1="65" x2="110" y2="65" stroke="#94A3B8" strokeWidth="3" />
-                        <line x1="18" y1="125" x2="102" y2="125" stroke="#94A3B8" strokeWidth="3" />
-                        <line x1="0" y1="185" x2="120" y2="185" stroke="#94A3B8" strokeWidth="3" />
-                        <line x1="38" y1="65" x2="82" y2="125" stroke="#475569" strokeWidth="1.2" />
-                        <line x1="82" y1="65" x2="38" y2="125" stroke="#475569" strokeWidth="1.2" />
-                        <line x1="32" y1="125" x2="88" y2="185" stroke="#475569" strokeWidth="1.2" />
-                        <line x1="88" y1="125" x2="32" y2="185" stroke="#475569" strokeWidth="1.2" />
-                        <line x1="28" y1="185" x2="92" y2="270" stroke="#475569" strokeWidth="1.5" />
-                        <line x1="92" y1="185" x2="28" y2="270" stroke="#475569" strokeWidth="1.5" />
-                        <rect x="8" y="65" width="4" height="15" fill="#F59E0B" />
-                        <rect x="108" y="65" width="4" height="15" fill="#F59E0B" />
-                        <rect x="16" y="125" width="4" height="15" fill="#F59E0B" />
-                        <rect x="100" y="125" width="4" height="15" fill="#F59E0B" />
-                        <rect x="-2" y="185" width="4" height="15" fill="#F59E0B" />
-                        <rect x="118" y="185" width="4" height="15" fill="#F59E0B" />
+                        <polygon points="50,0 70,0 95,360 25,360" fill="none" stroke="#283548" strokeWidth="2.5" />
+                        <line x1="60" y1="0" x2="60" y2="360" stroke="#1E293B" strokeWidth="1.5" />
+                        <line x1="10" y1="65" x2="110" y2="65" stroke="#334155" strokeWidth="2.5" />
+                        <line x1="18" y1="125" x2="102" y2="125" stroke="#334155" strokeWidth="2.5" />
+                        <line x1="0" y1="185" x2="120" y2="185" stroke="#334155" strokeWidth="2.5" />
+                        <line x1="38" y1="65" x2="82" y2="125" stroke="#1E293B" strokeWidth="1.2" />
+                        <line x1="82" y1="65" x2="38" y2="125" stroke="#1E293B" strokeWidth="1.2" />
+                        <line x1="32" y1="125" x2="88" y2="185" stroke="#1E293B" strokeWidth="1.2" />
+                        <line x1="88" y1="125" x2="32" y2="185" stroke="#1E293B" strokeWidth="1.2" />
+                        <line x1="28" y1="185" x2="92" y2="270" stroke="#1E293B" strokeWidth="1.5" />
+                        <line x1="92" y1="185" x2="28" y2="270" stroke="#1E293B" strokeWidth="1.5" />
+                        <rect x="8" y="65" width="4" height="15" fill="#E25121" />
+                        <rect x="108" y="65" width="4" height="15" fill="#E25121" />
+                        <rect x="16" y="125" width="4" height="15" fill="#E25121" />
+                        <rect x="100" y="125" width="4" height="15" fill="#E25121" />
+                        <rect x="-2" y="185" width="4" height="15" fill="#E25121" />
+                        <rect x="118" y="185" width="4" height="15" fill="#E25121" />
                       </g>
 
                       {/* Transmission Tower 2 (Mid-Left Lattice Pylon) */}
                       <g transform="translate(340, 290) scale(0.92)">
-                        <polygon points="50,0 70,0 95,360 25,360" fill="none" stroke="#475569" strokeWidth="2.2" />
-                        <line x1="10" y1="65" x2="110" y2="65" stroke="#64748B" strokeWidth="2.5" />
-                        <line x1="18" y1="125" x2="102" y2="125" stroke="#64748B" strokeWidth="2.5" />
-                        <line x1="0" y1="185" x2="120" y2="185" stroke="#64748B" strokeWidth="2.5" />
+                        <polygon points="50,0 70,0 95,360 25,360" fill="none" stroke="#283548" strokeWidth="2.2" />
+                        <line x1="10" y1="65" x2="110" y2="65" stroke="#334155" strokeWidth="2" />
+                        <line x1="18" y1="125" x2="102" y2="125" stroke="#334155" strokeWidth="2" />
+                        <line x1="0" y1="185" x2="120" y2="185" stroke="#334155" strokeWidth="2" />
                       </g>
 
                       {/* High-Voltage Power Lines towards Facility */}
                       <g>
-                        <path d="M180,315 Q300,360 410,350 T620,440" fill="none" stroke="#475569" strokeWidth="2.5" />
-                        <path d="M225,385 Q340,430 460,405 T620,470" fill="none" stroke="#475569" strokeWidth="2.5" />
+                        <path d="M180,315 Q300,360 410,350 T620,440" fill="none" stroke="#1E293B" strokeWidth="2.5" />
+                        <path d="M225,385 Q340,430 460,405 T620,470" fill="none" stroke="#1E293B" strokeWidth="2.5" />
                         <path
                           d="M180,315 Q300,360 410,350 T620,440"
                           fill="none"
-                          stroke="#F59E0B"
+                          stroke="#E25121"
                           strokeWidth="3.5"
                           strokeDasharray="16 32"
                           strokeDashoffset={-powerPulseOffset}
-                          filter="url(#amberGlow)"
+                          filter="url(#solarOrangeGlow)"
                           opacity="0.9"
                         />
                         <path
                           d="M225,385 Q340,430 460,405 T620,470"
                           fill="none"
-                          stroke="#FCD34D"
+                          stroke="#C0020F"
                           strokeWidth="3"
                           strokeDasharray="12 28"
                           strokeDashoffset={-powerPulseOffset * 1.2}
-                          filter="url(#amberGlow)"
+                          filter="url(#solarOrangeGlow)"
                           opacity="0.85"
                         />
                       </g>
 
                       {/* Utility Transformer Yard at Facility Intake */}
                       <g transform="translate(560, 480)">
-                        <rect x="0" y="30" width="85" height="65" rx="5" fill="#1E293B" stroke="#475569" strokeWidth="2" />
-                        <rect x="12" y="10" width="14" height="20" fill="#334155" />
-                        <rect x="36" y="10" width="14" height="20" fill="#334155" />
-                        <rect x="60" y="10" width="14" height="20" fill="#334155" />
-                        <text x="42" y="65" fill="#94A3B8" fontSize="8.5" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
+                        <rect x="0" y="30" width="85" height="65" rx="5" fill="#0B1320" stroke="#1E293B" strokeWidth="2" />
+                        <rect x="12" y="10" width="14" height="20" fill="#1E293B" />
+                        <rect x="36" y="10" width="14" height="20" fill="#1E293B" />
+                        <rect x="60" y="10" width="14" height="20" fill="#1E293B" />
+                        <text x="42" y="65" fill="#E25121" fontSize="8.5" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
                           11kV GRID
                         </text>
-                        <circle cx="42" cy="48" r="4" fill="#F59E0B" filter="url(#amberGlow)">
+                        <circle cx="42" cy="48" r="4" fill="#E25121" filter="url(#solarOrangeGlow)">
                           <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" />
                         </circle>
                       </g>
 
                       {/* Traditional Utility Meter Box */}
                       <g transform="translate(480, 590)">
-                        <rect x="0" y="0" width="150" height="100" rx="6" fill="#0F172A" stroke="#475569" strokeWidth="2" />
-                        <rect x="10" y="10" width="130" height="32" rx="3" fill="#020617" stroke="#334155" strokeWidth="1" />
-                        <text x="18" y="32" fill="#F59E0B" fontFamily="monospace" fontSize="15" fontWeight="bold" letterSpacing="1.5">
+                        <rect x="0" y="0" width="150" height="100" rx="6" fill="#0B0F17" stroke="#1E293B" strokeWidth="2" />
+                        <rect x="10" y="10" width="130" height="32" rx="3" fill="#070A0F" stroke="#E25121" strokeWidth="1" />
+                        <text x="18" y="32" fill="#E25121" fontFamily="monospace" fontSize="15" fontWeight="bold" letterSpacing="1.5">
                           084,920
                         </text>
-                        <text x="110" y="32" fill="#94A3B8" fontFamily="monospace" fontSize="10">
+                        <text x="110" y="32" fill="#E25121" fontFamily="monospace" fontSize="10">
                           kWh
                         </text>
-                        <circle cx="36" cy="68" r="14" fill="none" stroke="#475569" strokeWidth="2" />
+                        <circle cx="36" cy="68" r="14" fill="none" stroke="#1E293B" strokeWidth="2" />
                         <line
                           x1="36"
                           y1="68"
                           x2={36 + 11 * Math.cos((meterDialRotation * Math.PI) / 180)}
                           y2={68 + 11 * Math.sin((meterDialRotation * Math.PI) / 180)}
-                          stroke="#EF4444"
+                          stroke="#C0020F"
                           strokeWidth="2.2"
                         />
-                        <circle cx="36" cy="68" r="2.5" fill="#EF4444" />
+                        <circle cx="36" cy="68" r="2.5" fill="#C0020F" />
                         <text x="62" y="64" fill="#E2E8F0" fontSize="9.5" fontWeight="bold">
                           UTILITY DRAW
                         </text>
-                        <rect x="62" y="70" width="76" height="16" rx="3" fill="#451A03" stroke="#F59E0B" strokeWidth="1" />
-                        <text x="68" y="82" fill="#FBBF24" fontSize="8" fontWeight="bold" fontFamily="monospace">
+                        <rect x="62" y="70" width="76" height="16" rx="3" fill="#1F0D09" stroke="#E25121" strokeWidth="1" />
+                        <text x="68" y="82" fill="#E25121" fontSize="8" fontWeight="bold" fontFamily="monospace">
                           100% GRID RELIANT
                         </text>
                       </g>
@@ -469,20 +469,20 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           width="200"
                           height="90"
                           rx="10"
-                          fill="#0F172A"
+                          fill="#0B0F17"
                           fillOpacity="0.94"
-                          stroke="#F59E0B"
-                          strokeWidth="1.5"
+                          stroke="#E25121"
+                          strokeWidth="1.8"
                           filter="drop-shadow(0 10px 20px rgba(0,0,0,0.5))"
                         />
-                        <path d="M14,22 L22,10 L30,22 Z" fill="#EF4444" />
-                        <text x="36" y="20" fill="#F87171" fontSize="11" fontWeight="bold">
+                        <path d="M14,22 L22,10 L30,22 Z" fill="#C0020F" />
+                        <text x="36" y="20" fill="#E25121" fontSize="11" fontWeight="bold">
                           Tariff Volatility Alert
                         </text>
                         <text x="14" y="44" fill="#CBD5E1" fontSize="10">
                           Peak Commercial Demand
                         </text>
-                        <text x="14" y="64" fill="#F59E0B" fontSize="14" fontWeight="bold" fontFamily="monospace">
+                        <text x="14" y="64" fill="#E25121" fontSize="14" fontWeight="bold" fontFamily="monospace">
                           ▲ +18.4% Tariff Exposure
                         </text>
                         <text x="14" y="78" fill="#94A3B8" fontSize="8.5">
@@ -497,31 +497,33 @@ export default function EnergyApproachComparison({ onNavigate }) {
                     <g id="architectural-facility" transform="translate(680, 320)">
                       <polygon
                         points="40,240 260,130 260,370 40,480"
-                        fill={t < 4 ? '#1E293B' : '#0B3934'}
-                        stroke={t < 4 ? '#334155' : '#145A51'}
+                        fill="#090E17"
+                        stroke="#1E293B"
                         strokeWidth="2"
                         className="transition-colors duration-700"
                       />
 
                       <polygon
                         points="260,130 660,250 660,490 260,370"
-                        fill={t < 4 ? 'url(#bldgFacadeGrid)' : 'url(#bldgFacadeDay)'}
-                        stroke={t < 4 ? '#475569' : '#0B7285'}
+                        fill="url(#bldgFacadeDay)"
+                        stroke="#19ABCF"
                         strokeWidth="2.5"
+                        strokeOpacity="0.7"
                         className="transition-colors duration-700"
                       />
 
                       <polygon
                         points="660,250 860,190 860,390 660,450"
-                        fill={t < 4 ? '#1E293B' : '#0D443E'}
-                        stroke={t < 4 ? '#334155' : '#1AA3B6'}
+                        fill="#0B1320"
+                        stroke="#19ABCF"
                         strokeWidth="2"
+                        strokeOpacity="0.6"
                         className="transition-colors duration-700"
                       />
                       <polygon
                         points="860,190 950,220 950,420 860,390"
-                        fill={t < 4 ? '#0F172A' : '#072623'}
-                        stroke={t < 4 ? '#1E293B' : '#12544B'}
+                        fill="#08101C"
+                        stroke="#1E293B"
                         strokeWidth="1.5"
                         className="transition-colors duration-700"
                       />
@@ -531,25 +533,26 @@ export default function EnergyApproachComparison({ onNavigate }) {
                         <polygon
                           key={`win-${i}`}
                           points={`690,${265 + i * 36} 830,${225 + i * 36} 830,${248 + i * 36} 690,${288 + i * 36}`}
-                          fill={t < 4 ? '#0284C7' : '#21D6B2'}
-                          fillOpacity={t < 4 ? '0.25' : '0.55'}
-                          stroke={t < 4 ? '#38BDF8' : '#A7F3D0'}
+                          fill="#19ABCF"
+                          fillOpacity="0.45"
+                          stroke="#19ABCF"
                           strokeWidth="1"
+                          filter="url(#neonGlowCyan)"
                           className="transition-all duration-700"
                         />
                       ))}
 
                       {/* Loading Bays */}
-                      <polygon points="320,380 400,404 400,454 320,430" fill="#0A111E" stroke="#475569" strokeWidth="1" />
-                      <polygon points="440,416 520,440 520,490 440,466" fill="#0A111E" stroke="#475569" strokeWidth="1" />
+                      <polygon points="320,380 400,404 400,454 320,430" fill="#070A0F" stroke="#1E293B" strokeWidth="1" />
+                      <polygon points="440,416 520,440 520,490 440,466" fill="#070A0F" stroke="#1E293B" strokeWidth="1" />
 
                       {/* Facility Ground Signage */}
                       <g transform="translate(600, 470)">
-                        <rect x="0" y="0" width="120" height="34" rx="4" fill="#0A221F" stroke="#1AA3B6" strokeWidth="1.2" />
+                        <rect x="0" y="0" width="120" height="34" rx="4" fill="#0B1320" stroke="#19ABCF" strokeWidth="1.2" />
                         <text x="60" y="17" fill="#FFFFFF" fontSize="9" fontWeight="bold" textAnchor="middle">
                           COMMERCIAL HUB
                         </text>
-                        <text x="60" y="28" fill="#21D6B2" fontSize="7.5" fontFamily="monospace" textAnchor="middle">
+                        <text x="60" y="28" fill="#19ABCF" fontSize="7.5" fontFamily="monospace" textAnchor="middle">
                           LOAD DEMAND: 750 kW
                         </text>
                       </g>
@@ -557,17 +560,17 @@ export default function EnergyApproachComparison({ onNavigate }) {
                       {/* Main Roof Surface */}
                       <polygon
                         points="40,240 260,130 660,250 440,360"
-                        fill={t < 4 ? 'url(#bldgRoofGrid)' : 'url(#bldgRoofDay)'}
-                        stroke={t < 4 ? '#64748B' : '#1AA3B6'}
+                        fill="url(#bldgRoofDay)"
+                        stroke="#19ABCF"
                         strokeWidth="2"
                         className="transition-colors duration-700"
                       />
 
                       {/* Scene 1 Roof Exhaust Vents (fades during transition) */}
                       <g opacity={t < 4 ? 1 : Math.max(0, 1 - s2Progress * 2)}>
-                        <rect x="150" y="195" width="28" height="22" fill="#334155" stroke="#475569" strokeWidth="1.5" />
-                        <circle cx="164" cy="206" r="7" fill="#1E293B" stroke="#64748B" strokeWidth="1" />
-                        <rect x="250" y="240" width="32" height="26" fill="#334155" stroke="#475569" strokeWidth="1.5" />
+                        <rect x="150" y="195" width="28" height="22" fill="#0B1320" stroke="#1E293B" strokeWidth="1.5" />
+                        <circle cx="164" cy="206" r="7" fill="#070A0F" stroke="#1E293B" strokeWidth="1" />
+                        <rect x="250" y="240" width="32" height="26" fill="#0B1320" stroke="#1E293B" strokeWidth="1.5" />
                       </g>
 
                       {/* ============================================================== */}
@@ -587,9 +590,9 @@ export default function EnergyApproachComparison({ onNavigate }) {
                             height="50"
                             rx="3"
                             fill="url(#solarGlassGrad)"
-                            stroke="#21D6B2"
+                            stroke="#19ABCF"
                             strokeWidth="1.5"
-                            filter="url(#neonGlowTeal)"
+                            filter="url(#neonGlowCyan)"
                           />
                           <rect x="0" y="0" width="210" height="50" fill="url(#pvGridPattern)" opacity="0.9" />
                           <line
@@ -612,7 +615,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
                             height="55"
                             rx="3"
                             fill="url(#solarGlassGrad)"
-                            stroke="#21D6B2"
+                            stroke="#19ABCF"
                             strokeWidth="1.5"
                           />
                           <rect x="0" y="0" width="230" height="55" fill="url(#pvGridPattern)" opacity="0.9" />
@@ -636,7 +639,7 @@ export default function EnergyApproachComparison({ onNavigate }) {
                             height="60"
                             rx="3"
                             fill="url(#solarGlassGrad)"
-                            stroke="#21D6B2"
+                            stroke="#19ABCF"
                             strokeWidth="1.5"
                           />
                           <rect x="0" y="0" width="240" height="60" fill="url(#pvGridPattern)" opacity="0.9" />
@@ -652,15 +655,15 @@ export default function EnergyApproachComparison({ onNavigate }) {
                         </g>
 
                         {/* Rooftop Solar DC Conduit Run */}
-                        <path d="M500,320 L530,340 L530,440" fill="none" stroke="#1AA3B6" strokeWidth="3.5" />
+                        <path d="M500,320 L530,340 L530,440" fill="none" stroke="#C0020F" strokeWidth="3.5" />
                         <path
                           d="M500,320 L530,340 L530,440"
                           fill="none"
-                          stroke="#21D6B2"
+                          stroke="#19ABCF"
                           strokeWidth="4"
                           strokeDasharray="14 18"
                           strokeDashoffset={-solarPulseOffset}
-                          filter="url(#neonGlowTeal)"
+                          filter="url(#neonGlowCyan)"
                         />
                       </g>
                     </g>
@@ -675,8 +678,8 @@ export default function EnergyApproachComparison({ onNavigate }) {
                     >
                       {/* Sun & Irradiance Rays */}
                       <g transform="translate(1500, 150)">
-                        <circle cx="0" cy="0" r="120" fill="#FDE047" fillOpacity="0.12" filter="blur(30px)" />
-                        <circle cx="0" cy="0" r="56" fill="#FDE047" fillOpacity="0.9" />
+                        <circle cx="0" cy="0" r="120" fill="#E25121" fillOpacity="0.15" filter="blur(30px)" />
+                        <circle cx="0" cy="0" r="56" fill="#E25121" fillOpacity="0.9" />
                         <circle cx="0" cy="0" r="44" fill="#FFFFFF" />
                         <polygon points="0,0 -450,280 -330,340" fill="url(#sunRayGrad)" />
                         <polygon points="0,0 -600,240 -480,300" fill="url(#sunRayGrad)" opacity="0.6" />
@@ -685,17 +688,17 @@ export default function EnergyApproachComparison({ onNavigate }) {
 
                       {/* Smart Commercial Solar Inverter */}
                       <g transform="translate(1380, 680)">
-                        <rect x="0" y="0" width="125" height="140" rx="6" fill="#0C2E2A" stroke="#21D6B2" strokeWidth="2" />
-                        <rect x="12" y="14" width="101" height="40" rx="4" fill="#041B18" stroke="#1AA3B6" strokeWidth="1" />
-                        <text x="20" y="32" fill="#21D6B2" fontSize="11" fontFamily="monospace" fontWeight="bold">
+                        <rect x="0" y="0" width="125" height="140" rx="6" fill="#0B1320" stroke="#19ABCF" strokeWidth="2" />
+                        <rect x="12" y="14" width="101" height="40" rx="4" fill="#070A0F" stroke="#19ABCF" strokeWidth="1" />
+                        <text x="20" y="32" fill="#19ABCF" fontSize="11" fontFamily="monospace" fontWeight="bold">
                           INV-01: 98.9%
                         </text>
-                        <text x="20" y="46" fill="#A7F3D0" fontSize="9" fontFamily="monospace">
+                        <text x="20" y="46" fill="#7DD3FC" fontSize="9" fontFamily="monospace">
                           DC→AC 640 kW
                         </text>
-                        <circle cx="25" cy="74" r="4" fill="#10B981" filter="url(#neonGlowTeal)" />
-                        <circle cx="45" cy="74" r="4" fill="#10B981" filter="url(#neonGlowTeal)" />
-                        <circle cx="65" cy="74" r="4" fill="#1AA3B6" />
+                        <circle cx="25" cy="74" r="4" fill="#19ABCF" filter="url(#neonGlowCyan)" />
+                        <circle cx="45" cy="74" r="4" fill="#C0020F" filter="url(#neonGlowCyan)" />
+                        <circle cx="65" cy="74" r="4" fill="#E25121" />
                         <text x="20" y="98" fill="#E2E8F0" fontSize="9.5" fontWeight="bold">
                           SMART INVERTER
                         </text>
@@ -706,46 +709,46 @@ export default function EnergyApproachComparison({ onNavigate }) {
 
                       {/* Battery Energy Storage System (BESS) 1 MWh Unit */}
                       <g transform="translate(1540, 650)">
-                        <rect x="0" y="0" width="210" height="170" rx="8" fill="#082622" stroke="#1AA3B6" strokeWidth="2.5" />
+                        <rect x="0" y="0" width="210" height="170" rx="8" fill="#0B1320" stroke="#19ABCF" strokeWidth="2.5" />
                         {Array.from({ length: 8 }).map((_, i) => (
-                          <line key={i} x1={20 + i * 22} y1="14" x2={20 + i * 22} y2="156" stroke="#0F3F39" strokeWidth="2" />
+                          <line key={i} x1={20 + i * 22} y1="14" x2={20 + i * 22} y2="156" stroke="#1E293B" strokeWidth="2" />
                         ))}
-                        <rect x="22" y="22" width="166" height="48" rx="5" fill="#041816" stroke="#21D6B2" strokeWidth="1.2" />
-                        <text x="32" y="42" fill="#21D6B2" fontSize="11" fontWeight="bold" fontFamily="monospace">
+                        <rect x="22" y="22" width="166" height="48" rx="5" fill="#070A0F" stroke="#19ABCF" strokeWidth="1.2" />
+                        <text x="32" y="42" fill="#19ABCF" fontSize="11" fontWeight="bold" fontFamily="monospace">
                           VOLGA BESS — 1 MWh
                         </text>
-                        <rect x="32" y="50" width="146" height="10" rx="3" fill="#0B302B" />
+                        <rect x="32" y="50" width="146" height="10" rx="3" fill="#0E1726" />
                         <rect
                           x="32"
                           y="50"
                           width={146 * (0.88 + Math.sin(t * 1.5) * 0.06)}
                           height="10"
                           rx="3"
-                          fill="#10B981"
-                          filter="url(#neonGlowTeal)"
+                          fill="#19ABCF"
+                          filter="url(#neonGlowCyan)"
                         />
                         <text x="105" y="92" fill="#FFFFFF" fontSize="10.5" fontWeight="bold" textAnchor="middle">
                           PEAK SHAVING READY
                         </text>
-                        <text x="105" y="108" fill="#A8C4BC" fontSize="8.5" textAnchor="middle">
+                        <text x="105" y="108" fill="#94A3B8" fontSize="8.5" textAnchor="middle">
                           Active Frequency &amp; Backup Support
                         </text>
-                        <rect x="30" y="122" width="150" height="24" rx="4" fill="#0B3E36" />
-                        <text x="105" y="138" fill="#21D6B2" fontSize="9" fontWeight="bold" fontFamily="monospace" textAnchor="middle">
+                        <rect x="30" y="122" width="150" height="24" rx="4" fill="#132238" stroke="#19ABCF" strokeWidth="0.8" />
+                        <text x="105" y="138" fill="#19ABCF" fontSize="9" fontWeight="bold" fontFamily="monospace" textAnchor="middle">
                           DISPATCH: SELF-CONSUMPTION
                         </text>
                       </g>
 
                       {/* Clean Energy Busbar Conduits */}
-                      <path d="M1380,750 L1310,750 L1310,640 L1200,640" fill="none" stroke="#1AA3B6" strokeWidth="3" />
+                      <path d="M1380,750 L1310,750 L1310,640 L1200,640" fill="none" stroke="#C0020F" strokeWidth="3" />
                       <path
                         d="M1380,750 L1310,750 L1310,640 L1200,640"
                         fill="none"
-                        stroke="#21D6B2"
+                        stroke="#19ABCF"
                         strokeWidth="3.5"
                         strokeDasharray="16 20"
                         strokeDashoffset={-solarPulseOffset * 1.2}
-                        filter="url(#neonGlowTeal)"
+                        filter="url(#neonGlowCyan)"
                       />
 
                       {/* SCADA Generation Monitoring Floating Dashboard */}
@@ -759,42 +762,42 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           width="300"
                           height="190"
                           rx="12"
-                          fill="#07221E"
+                          fill="#0B1320"
                           fillOpacity="0.95"
-                          stroke="#21D6B2"
+                          stroke="#19ABCF"
                           strokeWidth="1.8"
                           filter="drop-shadow(0 15px 35px rgba(0,0,0,0.6))"
                         />
-                        <rect x="0" y="0" width="300" height="36" rx="12" fill="#0E3832" />
-                        <circle cx="20" cy="18" r="4.5" fill="#21D6B2" filter="url(#neonGlowTeal)" />
+                        <rect x="0" y="0" width="300" height="36" rx="12" fill="#0E1726" />
+                        <circle cx="20" cy="18" r="4.5" fill="#C0020F" filter="url(#neonGlowCyan)" />
                         <text x="32" y="22" fill="#FFFFFF" fontSize="11" fontWeight="bold">
                           VOLGA SCADA INTELLIGENCE
                         </text>
-                        <text x="235" y="22" fill="#1AA3B6" fontSize="9" fontFamily="monospace">
+                        <text x="235" y="22" fill="#19ABCF" fontSize="9" fontFamily="monospace">
                           LIVE
                         </text>
 
                         {/* Generation Bell Curve Graphic */}
                         <g transform="translate(18, 48)">
-                          <rect x="0" y="0" width="264" height="80" rx="5" fill="#041B18" stroke="#164A40" strokeWidth="1" />
-                          <line x1="0" y1="26" x2="264" y2="26" stroke="#0E352E" strokeWidth="1" strokeDasharray="3 3" />
-                          <line x1="0" y1="53" x2="264" y2="53" stroke="#0E352E" strokeWidth="1" strokeDasharray="3 3" />
+                          <rect x="0" y="0" width="264" height="80" rx="5" fill="#070A0F" stroke="#1E293B" strokeWidth="1" />
+                          <line x1="0" y1="26" x2="264" y2="26" stroke="#1E293B" strokeWidth="1" strokeDasharray="3 3" />
+                          <line x1="0" y1="53" x2="264" y2="53" stroke="#1E293B" strokeWidth="1" strokeDasharray="3 3" />
                           <path
                             d="M10,70 C65,70 95,14 132,14 C170,14 200,70 254,70 L254,70 L10,70 Z"
-                            fill="#1AA3B6"
-                            fillOpacity="0.25"
+                            fill="#19ABCF"
+                            fillOpacity="0.18"
                           />
                           <path
                             d="M10,70 C65,70 95,14 132,14 C170,14 200,70 254,70"
                             fill="none"
-                            stroke="#21D6B2"
+                            stroke="#19ABCF"
                             strokeWidth="2.5"
-                            filter="url(#neonGlowTeal)"
+                            filter="url(#neonGlowCyan)"
                           />
-                          <circle cx="132" cy="14" r="4.5" fill="#FFFFFF" filter="url(#neonGlowTeal)">
+                          <circle cx="132" cy="14" r="4.5" fill="#E25121" filter="url(#neonGlowCyan)">
                             <animate attributeName="r" values="3.5;5.5;3.5" dur="1.8s" repeatCount="indefinite" />
                           </circle>
-                          <text x="142" y="17" fill="#A7F3D0" fontSize="8.5" fontWeight="bold" fontFamily="monospace">
+                          <text x="142" y="17" fill="#7DD3FC" fontSize="8.5" fontWeight="bold" fontFamily="monospace">
                             PEAK YIELD (640 kW)
                           </text>
                         </g>
@@ -804,12 +807,12 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           <text x="0" y="15" fill="#94A3B8" fontSize="9.5">
                             Electricity Cost Index:
                           </text>
-                          <rect x="120" y="5" width="160" height="18" rx="4" fill="#0E3832" />
-                          <rect x="120" y="5" width="80" height="18" rx="4" fill="#10B981" />
+                          <rect x="120" y="5" width="160" height="18" rx="4" fill="#0E1726" />
+                          <rect x="120" y="5" width="80" height="18" rx="4" fill="#C0020F" />
                           <text x="200" y="18" fill="#E2E8F0" fontSize="8.5" fontWeight="bold" textAnchor="middle">
                             Levelized Solar Cost
                           </text>
-                          <text x="0" y="34" fill="#21D6B2" fontSize="9" fontWeight="semibold">
+                          <text x="0" y="34" fill="#19ABCF" fontSize="9" fontWeight="semibold">
                             ✓ Predictable On-Site Generation
                           </text>
                         </g>
@@ -829,14 +832,14 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           y2="1080"
                           stroke="#FFFFFF"
                           strokeWidth="3.5"
-                          filter="url(#neonGlowTeal)"
+                          filter="url(#neonGlowCyan)"
                         />
                         <circle
                           cx={sweepX}
                           cy="480"
                           r={35 + Math.sin(t * 10) * 15}
                           fill="none"
-                          stroke="#21D6B2"
+                          stroke="#19ABCF"
                           strokeWidth="2.5"
                           opacity="0.8"
                         />
@@ -845,9 +848,9 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           cy="480"
                           r={65 + Math.sin(t * 10) * 20}
                           fill="none"
-                          stroke="#1AA3B6"
+                          stroke="#C0020F"
                           strokeWidth="1.5"
-                          opacity="0.5"
+                          opacity="0.6"
                         />
                       </g>
                     )}
@@ -863,14 +866,14 @@ export default function EnergyApproachComparison({ onNavigate }) {
                           y1="0"
                           x2={currentSplitX}
                           y2="1080"
-                          stroke="#21D6B2"
+                          stroke="#19ABCF"
                           strokeWidth="3.5"
-                          filter="url(#neonGlowTeal)"
+                          filter="url(#neonGlowCyan)"
                         />
                         {/* Center VS Badge */}
                         <g transform={`translate(${currentSplitX - 35}, 520)`}>
-                          <rect x="0" y="0" width="70" height="36" rx="18" fill="#061B1A" stroke="#21D6B2" strokeWidth="2" />
-                          <text x="35" y="23" fill="#21D6B2" fontSize="12" fontWeight="bold" textAnchor="middle">
+                          <rect x="0" y="0" width="70" height="36" rx="18" fill="#0B0F17" stroke="#19ABCF" strokeWidth="2" />
+                          <text x="35" y="23" fill="#19ABCF" fontSize="12" fontWeight="bold" textAnchor="middle">
                             VS
                           </text>
                         </g>

@@ -8,19 +8,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#D5000E',
-          dark: '#A9000B',
-          light: '#FF3844',
+          DEFAULT: '#C0020F',
+          dark: '#96010B',
+          light: '#E61E2C',
         },
         secondary: {
-          DEFAULT: '#EF4444',
-          dark: '#D5000E',
-          light: '#F87171',
+          DEFAULT: '#19ABCF',
+          dark: '#1387A3',
+          light: '#42C4E5',
         },
         accent: {
-          DEFAULT: '#EF4444',
-          dark: '#D5000E',
-          light: '#FCA5A5',
+          DEFAULT: '#E25121',
+          dark: '#B73D15',
+          light: '#EA724A',
         },
         heading: '#FFFFFF',
         body: '#E5E7EB',
@@ -47,9 +47,9 @@ export default {
         'subtle': '0 2px 10px rgba(0, 0, 0, 0.04)',
         'premium': '0 10px 30px -10px rgba(17, 24, 39, 0.08)',
         'elevated': '0 20px 40px -15px rgba(17, 24, 39, 0.12)',
-        'glow-red': '0 0 25px -5px rgba(213, 0, 14, 0.3)',
-        'glow-blue': '0 0 25px -5px rgba(23, 189, 229, 0.3)',
-        'glow-accent': '0 0 25px -5px rgba(253, 223, 2, 0.3)',
+        'glow-red': '0 0 25px -5px rgba(192, 2, 15, 0.35)',
+        'glow-blue': '0 0 25px -5px rgba(25, 171, 207, 0.35)',
+        'glow-accent': '0 0 25px -5px rgba(226, 81, 33, 0.35)',
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

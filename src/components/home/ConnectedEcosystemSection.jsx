@@ -37,9 +37,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
       short: 'Solar',
       tag: 'POWER SOURCE',
       icon: Sun,
-      color: '#21D6B2',
-      accentBg: 'bg-[#21D6B2]/15 text-[#21D6B2]',
-      borderActive: 'border-[#21D6B2]/90 shadow-[0_0_24px_rgba(33,214,178,0.25)]',
+      color: '#E25121',
+      accentBg: 'bg-[#E25121]/15 text-[#E25121]',
+      borderActive: 'border-[#E25121]/90 shadow-[0_0_24px_rgba(226,81,33,0.3)]',
       x: 220,
       y: 160,
       summary: 'Volga designs and installs high-yield commercial rooftop solar arrays tailored to your factory load.',
@@ -50,9 +50,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
       name: 'Battery Storage',
       short: 'BESS',
       icon: BatteryCharging,
-      color: '#10B981',
-      accentBg: 'bg-emerald-500/15 text-emerald-400',
-      borderActive: 'border-emerald-400/90 shadow-[0_0_24px_rgba(52,211,153,0.25)]',
+      color: '#19ABCF',
+      accentBg: 'bg-[#19ABCF]/15 text-[#19ABCF]',
+      borderActive: 'border-[#19ABCF]/90 shadow-[0_0_24px_rgba(25,171,207,0.3)]',
       x: 220,
       y: 440,
       summary: 'Volga integrates industrial batteries to store midday solar surplus and power your plant during expensive peak hours.',
@@ -63,9 +63,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
       name: 'CAPEX Model',
       short: 'CAPEX',
       icon: Coins,
-      color: '#1AA3B6',
-      accentBg: 'bg-[#1AA3B6]/15 text-[#1AA3B6]',
-      borderActive: 'border-[#1AA3B6]/90 shadow-[0_0_24px_rgba(26,163,182,0.25)]',
+      color: '#C0020F',
+      accentBg: 'bg-[#C0020F]/15 text-[#C0020F]',
+      borderActive: 'border-[#C0020F]/90 shadow-[0_0_24px_rgba(192,2,15,0.3)]',
       x: 980,
       y: 160,
       summary: 'You own the solar asset on your balance sheet, gaining 40% tax depreciation write-offs and long-term free energy.',
@@ -76,9 +76,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
       name: 'OPEX / RESCO',
       short: 'OPEX',
       icon: BadgePercent,
-      color: '#21D6B2',
-      accentBg: 'bg-emerald-500/15 text-[#21D6B2]',
-      borderActive: 'border-[#21D6B2]/90 shadow-[0_0_24px_rgba(33,214,178,0.25)]',
+      color: '#19ABCF',
+      accentBg: 'bg-[#19ABCF]/15 text-[#19ABCF]',
+      borderActive: 'border-[#19ABCF]/90 shadow-[0_0_24px_rgba(25,171,207,0.3)]',
       x: 980,
       y: 440,
       summary: 'Volga funds, builds, and maintains the entire plant at ₹0 capital cost. You simply buy clean power at a steep discount.',
@@ -95,8 +95,8 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
     >
       {/* Background Architectural Blueprint & Ambient Lighting */}
       <div className="absolute inset-0 bg-blueprint-dark opacity-35 pointer-events-none" />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0B7285]/15 blur-[180px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#10B981]/10 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#C0020F]/15 blur-[180px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#19ABCF]/12 blur-[160px] pointer-events-none rounded-full" />
 
       <Container size="2xl" className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -104,16 +104,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
         {/* 1. SECTION HEADER                                              */}
         {/* ============================================================== */}
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#1AA3B6]/30 bg-[#0A2622]/80 backdrop-blur-md mb-4 shadow-[0_0_20px_rgba(26,163,182,0.15)]">
-            <span className="w-2 h-2 rounded-full bg-[#21D6B2] shadow-[0_0_8px_#21D6B2]" />
-            <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#A7F3D0]">
-              THE CONNECTED VOLGA ECOSYSTEM
-            </span>
-          </div>
-
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-3">
             Solar, Storage &amp; Financing{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1AA3B6] via-[#21D6B2] to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C0020F] via-[#E25121] to-[#19ABCF]">
               Connected Together
             </span>
           </h2>
@@ -128,17 +121,17 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
         {/* ============================================================== */}
         <div className="relative max-w-4xl mx-auto mb-10 sm:mb-12">
           {/* Ambient Glow behind canvas */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-[#0B7285]/15 via-[#1AA3B6]/20 to-[#21D6B2]/15 rounded-2xl blur-lg opacity-60 pointer-events-none" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#C0020F]/20 via-[#E25121]/20 to-[#19ABCF]/20 rounded-2xl blur-lg opacity-60 pointer-events-none" />
 
           {/* Main Viewport */}
-          <div className="relative rounded-2xl overflow-hidden border border-[#1AA3B6]/30 bg-[#061B1A] shadow-[0_15px_40px_rgba(0,0,0,0.8)] select-none">
-            <div className="relative w-full aspect-[2/1] sm:aspect-[2.2/1] max-h-[360px] sm:max-h-[400px] bg-[#051817] overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0B0F17] shadow-[0_15px_40px_rgba(0,0,0,0.8)] select-none">
+            <div className="relative w-full aspect-[2/1] sm:aspect-[2.2/1] max-h-[360px] sm:max-h-[400px] bg-[#070A0F] overflow-hidden">
               <svg viewBox="0 0 1200 600" className="w-full h-full block" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <radialGradient id="ecoHubGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stopColor="#21D6B2" stopOpacity="0.4" />
-                    <stop offset="50%" stopColor="#0B7285" stopOpacity="0.15" />
-                    <stop offset="100%" stopColor="#051817" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#C0020F" stopOpacity="0.4" />
+                    <stop offset="50%" stopColor="#E25121" stopOpacity="0.15" />
+                    <stop offset="100%" stopColor="#070A0F" stopOpacity="0" />
                   </radialGradient>
 
                   <filter id="ecoNeonGlow" x="-20%" y="-20%" width="140%" height="140%">
@@ -148,7 +141,7 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                 </defs>
 
                 {/* Digital Blueprint Background Grid */}
-                <g stroke="#144A40" strokeWidth="0.8" opacity="0.3">
+                <g stroke="#1E293B" strokeWidth="0.8" opacity="0.35">
                   {Array.from({ length: 17 }).map((_, i) => (
                     <line key={`vx-${i}`} x1={i * 75} y1="0" x2={i * 75} y2="600" strokeDasharray="3 4" />
                   ))}
@@ -158,8 +151,8 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                 </g>
 
                 {/* Central Concentric Energy Pulse Rings around Enterprise */}
-                <circle cx="600" cy="300" r="260" fill="none" stroke="#1AA3B6" strokeWidth="1" strokeDasharray="4 8" opacity="0.25" />
-                <circle cx="600" cy="300" r="180" fill="none" stroke="#21D6B2" strokeWidth="1.2" strokeDasharray="6 6" opacity="0.35" />
+                <circle cx="600" cy="300" r="260" fill="none" stroke="#19ABCF" strokeWidth="1" strokeDasharray="4 8" opacity="0.25" />
+                <circle cx="600" cy="300" r="180" fill="none" stroke="#E25121" strokeWidth="1.2" strokeDasharray="6 6" opacity="0.35" />
                 <circle cx="600" cy="300" r="220" fill="url(#ecoHubGlow)" />
 
                 {/* 4 Connected Conduits (Beziers to Center 600, 300) */}
@@ -182,9 +175,9 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                       <path
                         d={pathD}
                         fill="none"
-                        stroke={isHighlighted ? p.color : '#164E44'}
+                        stroke={isHighlighted ? p.color : '#1E293B'}
                         strokeWidth={isHighlighted ? '3.5' : '1.5'}
-                        strokeOpacity={isHighlighted ? '0.75' : '0.2'}
+                        strokeOpacity={isHighlighted ? '0.75' : '0.25'}
                       />
 
                       {/* Animated Flowing Pulse Stream */}
@@ -222,7 +215,7 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                         cx={p.x}
                         cy={p.y}
                         r={isSelected ? 58 : 46}
-                        fill="#072420"
+                        fill="#0B0F17"
                         stroke={isSelected ? '#FFFFFF' : p.color}
                         strokeWidth={isSelected ? 3 : 1.8}
                         filter="url(#ecoNeonGlow)"
@@ -233,7 +226,7 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                         cx={p.x}
                         cy={p.y}
                         r={isSelected ? 44 : 35}
-                        fill="#0A332B"
+                        fill="#0E131F"
                         stroke={p.color}
                         strokeWidth="1"
                         strokeDasharray={isSelected ? '4 3' : 'none'}
@@ -267,13 +260,13 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                   onClick={() => setSelectedPillar('all')}
                 >
                   {/* Outer Core */}
-                  <circle cx="600" cy="300" r="82" fill="#06201B" stroke="#21D6B2" strokeWidth="2.8" />
-                  <circle cx="600" cy="300" r="70" fill="#0A2D27" stroke="#1AA3B6" strokeWidth="1.2" strokeDasharray="5 4" />
-                  <circle cx="600" cy="300" r="58" fill="#0E4238" />
+                  <circle cx="600" cy="300" r="82" fill="#0B0F17" stroke="#C0020F" strokeWidth="2.8" />
+                  <circle cx="600" cy="300" r="70" fill="#0E131F" stroke="#E25121" strokeWidth="1.2" strokeDasharray="5 4" />
+                  <circle cx="600" cy="300" r="58" fill="#18080C" />
 
                   {/* Factory / Enterprise Icon */}
                   <g transform={`translate(585, 275)`}>
-                    <Building2 size={30} color="#21D6B2" strokeWidth={2} />
+                    <Building2 size={30} color="#C0020F" strokeWidth={2} />
                   </g>
 
                   {/* Center Text */}
@@ -299,8 +292,8 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                 key={p.id}
                 onClick={() => setSelectedPillar(p.id)}
                 className={`relative p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col justify-between ${isSelected
-                  ? `bg-[#0A2622]/95 ${p.borderActive}`
-                  : 'bg-[#081816]/65 border-white/10 hover:border-[#1AA3B6]/40 hover:bg-[#0B211E]/75'
+                  ? `bg-[#0E131F]/95 ${p.borderActive}`
+                  : 'bg-[#0B0F17]/65 border-white/10 hover:border-white/20 hover:bg-[#0E131F]/75'
                   }`}
               >
                 <div>
@@ -333,7 +326,7 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
                       e.stopPropagation();
                       if (onNavigate) onNavigate(p.page);
                     }}
-                    className="inline-flex items-center gap-1.5 text-xs text-white font-semibold hover:text-[#21D6B2] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs text-white font-semibold hover:text-[#19ABCF] transition-colors"
                   >
                     <span>Learn more</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -342,7 +335,10 @@ export default function ConnectedEcosystemSection({ onNavigate }) {
 
                 {/* Active Indicator Bar */}
                 {isSelected && (
-                  <div className="absolute left-0 top-3 bottom-3 w-1.5 rounded-r-full bg-gradient-to-b from-[#1AA3B6] to-[#21D6B2]" />
+                  <div
+                    className="absolute left-0 top-3 bottom-3 w-1.5 rounded-r-full"
+                    style={{ backgroundColor: p.color }}
+                  />
                 )}
               </div>
             );

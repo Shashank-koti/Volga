@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --primary: #D5000E;
-    --primary-dark: #A9000B;
-    --primary-light: rgba(213, 0, 14, 0.15);
+    --primary: #C0020F;
+    --primary-dark: #96010B;
+    --primary-light: rgba(192, 2, 15, 0.15);
 
-    --secondary: #EF4444;
-    --secondary-dark: #D5000E;
-    --secondary-light: #F87171;
+    --secondary: #19ABCF;
+    --secondary-dark: #1387A3;
+    --secondary-light: #42C4E5;
 
-    --accent: #EF4444;
-    --accent-dark: #D5000E;
-    --accent-light: #FCA5A5;
+    --accent: #E25121;
+    --accent-dark: #B73D15;
+    --accent-light: #EA724A;
 
     --heading: #FFFFFF;
     --text: #F3F4F6;
@@ -55,15 +55,15 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D5000E;
+  background: #C0020F;
 }
 
 /* Technical Blueprint & Engineering Drafting Utilities */
 .bg-blueprint {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(213, 0, 14, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(213, 0, 14, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(192, 2, 15, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(192, 2, 15, 0.08) 1px, transparent 1px);
 }
 
 .bg-blueprint-dark {

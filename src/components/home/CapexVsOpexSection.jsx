@@ -22,8 +22,10 @@ export default function CapexVsOpexSection({ onNavigate }) {
       title: 'CAPEX (Asset Ownership)',
       desc: '100% solar asset ownership on your balance sheet with rapid 3–4 year payback and decades of free energy.',
       icon: Coins,
-      accentBg: 'bg-[#1AA3B6]/15 text-[#1AA3B6]',
-      activeBorder: 'border-[#1AA3B6]/90 shadow-[0_0_24px_rgba(26,163,182,0.25)]',
+      accentBg: 'bg-[#C0020F]/15 text-[#C0020F]',
+      activeBorder: 'border-[#C0020F]/90 shadow-[0_0_24px_rgba(192,2,15,0.25)]',
+      indicatorGrad: 'from-[#C0020F] to-[#E25121]',
+      pointColor: 'text-[#C0020F]',
       image: '/images/capex-model.jpg',
       imageAlt: 'CAPEX Rooftop Solar Facility Asset',
       badge: '40% TAX DEPRECIATION',
@@ -39,8 +41,10 @@ export default function CapexVsOpexSection({ onNavigate }) {
       title: 'OPEX / RESCO (Zero Upfront)',
       desc: 'Volga finances, builds, and maintains the plant. You pay only for delivered power at a 30–50% discount.',
       icon: BadgePercent,
-      accentBg: 'bg-emerald-500/15 text-[#21D6B2]',
-      activeBorder: 'border-[#21D6B2]/90 shadow-[0_0_24px_rgba(33,214,178,0.28)]',
+      accentBg: 'bg-[#19ABCF]/15 text-[#19ABCF]',
+      activeBorder: 'border-[#19ABCF]/90 shadow-[0_0_24px_rgba(25,171,207,0.28)]',
+      indicatorGrad: 'from-[#19ABCF] to-[#E25121]',
+      pointColor: 'text-[#19ABCF]',
       image: '/images/opex-model.jpg',
       imageAlt: 'OPEX RESCO Solar Operations & Maintenance',
       badge: '30–50% TARIFF SAVINGS',
@@ -62,8 +66,8 @@ export default function CapexVsOpexSection({ onNavigate }) {
     >
       {/* Background Subtle Ambient Glows */}
       <div className="absolute inset-0 bg-blueprint-dark opacity-30 pointer-events-none" />
-      <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-[#0B7285]/15 blur-[150px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-1/4 left-1/4 w-[450px] h-[450px] bg-[#1AA3B6]/12 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 right-1/4 w-[450px] h-[450px] bg-[#C0020F]/15 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/4 left-1/4 w-[450px] h-[450px] bg-[#19ABCF]/12 blur-[150px] pointer-events-none rounded-full" />
 
       <Container size="2xl" className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -71,7 +75,7 @@ export default function CapexVsOpexSection({ onNavigate }) {
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-3">
             CAPEX{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1AA3B6] via-[#21D6B2] to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C0020F] via-[#E25121] to-[#19ABCF]">
               vs. OPEX (RESCO)
             </span>
           </h2>
@@ -94,8 +98,8 @@ export default function CapexVsOpexSection({ onNavigate }) {
                   key={m.id}
                   onClick={() => setModel(m.id)}
                   className={`relative p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${isActive
-                    ? `bg-[#0A2622]/95 ${m.activeBorder}`
-                    : 'bg-[#081816]/60 border-white/10 hover:border-[#1AA3B6]/40 hover:bg-[#0B211E]/70'
+                    ? `bg-[#0E131F]/95 ${m.activeBorder}`
+                    : 'bg-[#0B0F17]/60 border-white/10 hover:border-white/20 hover:bg-[#0E131F]/70'
                     }`}
                 >
                   <div className="flex items-start gap-3.5">
@@ -121,7 +125,7 @@ export default function CapexVsOpexSection({ onNavigate }) {
                         {m.points.map((pt, i) => (
                           <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
                             <CheckCircle2
-                              className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-[#21D6B2]' : 'text-slate-500'
+                              className={`w-3.5 h-3.5 shrink-0 ${isActive ? m.pointColor : 'text-slate-500'
                                 }`}
                             />
                             <span>{pt}</span>
@@ -132,7 +136,7 @@ export default function CapexVsOpexSection({ onNavigate }) {
                   </div>
 
                   {isActive && (
-                    <div className="absolute left-0 top-3 bottom-3 w-1.5 rounded-r-full bg-gradient-to-b from-[#1AA3B6] to-[#21D6B2]" />
+                    <div className={`absolute left-0 top-3 bottom-3 w-1.5 rounded-r-full bg-gradient-to-b ${m.indicatorGrad}`} />
                   )}
                 </div>
               );
@@ -141,10 +145,10 @@ export default function CapexVsOpexSection({ onNavigate }) {
 
           {/* Right: Photographic Image Viewport */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-[#1AA3B6]/30 bg-[#061B1A] shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+            <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/10 bg-[#0B0F17] shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
 
               {/* 16:9 Image Viewport with Dynamic Transition */}
-              <div className="relative w-full aspect-video bg-[#051817] overflow-hidden">
+              <div className="relative w-full aspect-video bg-[#070A0F] overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={model}
@@ -161,7 +165,7 @@ export default function CapexVsOpexSection({ onNavigate }) {
                     />
 
                     {/* Gradient Vignette for Readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#051817] via-[#051817]/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070A0F] via-[#070A0F]/30 to-transparent" />
                   </motion.div>
                 </AnimatePresence>
               </div>
@@ -170,16 +174,16 @@ export default function CapexVsOpexSection({ onNavigate }) {
         </div>
 
         {/* Side-by-Side Benefits Table (4 Rows) */}
-        <div className="mt-10 sm:mt-12 rounded-2xl border border-white/10 bg-[#061B19]/80 backdrop-blur-xl p-4 sm:p-6">
+        <div className="mt-10 sm:mt-12 rounded-2xl border border-white/10 bg-[#0B0F17]/80 backdrop-blur-xl p-4 sm:p-6">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
               <thead>
                 <tr className="border-b border-white/10 text-slate-400 font-mono text-[11px]">
                   <th className="py-2.5 px-3 w-1/4">Key Benefit</th>
-                  <th className="py-2.5 px-3 w-[37.5%] text-[#1AA3B6] font-bold">
+                  <th className="py-2.5 px-3 w-[37.5%] text-[#C0020F] font-bold">
                     CAPEX Benefits
                   </th>
-                  <th className="py-2.5 px-3 w-[37.5%] text-[#21D6B2] font-bold">
+                  <th className="py-2.5 px-3 w-[37.5%] text-[#19ABCF] font-bold">
                     OPEX (RESCO) Benefits
                   </th>
                 </tr>
@@ -213,13 +217,13 @@ export default function CapexVsOpexSection({ onNavigate }) {
                     </td>
                     <td className="py-3 px-3 text-slate-300">
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#1AA3B6] shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#C0020F] shrink-0" />
                         <span>{row.capex}</span>
                       </div>
                     </td>
                     <td className="py-3 px-3 text-slate-300">
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#21D6B2] shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#19ABCF] shrink-0" />
                         <span>{row.opex}</span>
                       </div>
                     </td>
@@ -231,6 +235,6 @@ export default function CapexVsOpexSection({ onNavigate }) {
         </div>
 
       </Container>
-    </section >
+    </section>
   );
 }

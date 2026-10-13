@@ -46,19 +46,19 @@ export default function About({ onNavigate }) {
       title: 'Plant Performance',
       desc: 'Delivering solutions that enhance plant performance and generation efficiency.',
       icon: TrendingUp,
-      color: '#D5000E',
+      color: '#C0020F',
     },
     {
       title: 'Operational Reliability',
       desc: 'Structured engineering and maintenance ensuring dependable operational reliability.',
       icon: ShieldCheck,
-      color: '#EF4444',
+      color: '#19ABCF',
     },
     {
       title: 'Long Term Asset Value',
       desc: 'Protecting and maximizing the capital and functional value of solar assets across their lifecycle.',
       icon: Zap,
-      color: '#D5000E',
+      color: '#E25121',
     },
   ];
 

@@ -23,8 +23,8 @@ export default function EnergyStorageSection({ onNavigate }) {
     >
       {/* Background Architectural Blueprint & Ambient Glows */}
       <div className="absolute inset-0 bg-blueprint-dark opacity-30 pointer-events-none" />
-      <div className="absolute top-1/3 left-1/4 w-[450px] h-[450px] bg-[#10B981]/10 blur-[160px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-1/3 right-1/4 w-[450px] h-[450px] bg-[#0B7285]/12 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/3 left-1/4 w-[450px] h-[450px] bg-[#C0020F]/15 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/3 right-1/4 w-[450px] h-[450px] bg-[#19ABCF]/12 blur-[150px] pointer-events-none rounded-full" />
 
       <Container size="2xl" className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         {/* ============================================================== */}
@@ -33,7 +33,7 @@ export default function EnergyStorageSection({ onNavigate }) {
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-extrabold tracking-tight text-white mb-3">
             BATTERY ENERGY STORAGE{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1AA3B6] via-[#21D6B2] to-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C0020F] via-[#E25121] to-[#19ABCF]">
               (BESS)
             </span>
           </h2>
@@ -51,12 +51,12 @@ export default function EnergyStorageSection({ onNavigate }) {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative group max-w-md mx-auto">
               {/* Luxury Ambient Glow Behind Visual Box */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#0B7285]/20 via-[#1AA3B6]/25 to-[#21D6B2]/20 rounded-2xl blur-lg opacity-75 pointer-events-none" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#C0020F]/20 via-[#E25121]/20 to-[#19ABCF]/20 rounded-2xl blur-lg opacity-75 pointer-events-none" />
 
               {/* Viewport Frame */}
-              <div className="relative rounded-2xl overflow-hidden border border-[#1AA3B6]/30 bg-[#061B1A] shadow-[0_16px_40px_rgba(0,0,0,0.7)]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#0B0F17] shadow-[0_16px_40px_rgba(0,0,0,0.7)]">
                 {/* Compact Aspect Ratio Photographic Image */}
-                <div className="relative w-full aspect-[4/3] bg-[#051817] overflow-hidden">
+                <div className="relative w-full aspect-[4/3] bg-[#070A0F] overflow-hidden">
                   <img
                     src="/images/bess-storage-system.jpg"
                     alt="Volga BESS Commercial Battery Energy Storage Installation"
@@ -64,7 +64,7 @@ export default function EnergyStorageSection({ onNavigate }) {
                   />
 
                   {/* Gradient Vignette for Readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#051817]/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#070A0F]/80 via-transparent to-transparent" />
                 </div>
               </div>
             </div>
@@ -83,8 +83,8 @@ export default function EnergyStorageSection({ onNavigate }) {
 
             {/* 2 Simple Highlight Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-              <div className="p-3.5 rounded-xl bg-[#081816]/75 border border-white/10 flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#1AA3B6]/15 text-[#1AA3B6] flex items-center justify-center shrink-0">
+              <div className="p-3.5 rounded-xl bg-[#0B0F17]/75 border border-white/10 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#E25121]/15 text-[#E25121] flex items-center justify-center shrink-0">
                   <BatteryCharging className="w-4 h-4" />
                 </div>
                 <div>
@@ -97,8 +97,8 @@ export default function EnergyStorageSection({ onNavigate }) {
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-[#081816]/75 border border-white/10 flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/15 text-[#21D6B2] flex items-center justify-center shrink-0">
+              <div className="p-3.5 rounded-xl bg-[#0B0F17]/75 border border-white/10 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#19ABCF]/15 text-[#19ABCF] flex items-center justify-center shrink-0">
                   <Zap className="w-4 h-4" />
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function EnergyStorageSection({ onNavigate }) {
             <div className="pt-2">
               <button
                 onClick={() => onNavigate && onNavigate('bess')}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1AA3B6] to-[#21D6B2] text-[#051E1A] font-bold text-sm shadow-[0_0_20px_rgba(33,214,178,0.25)] hover:shadow-[0_0_28px_rgba(33,214,178,0.4)] transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#C0020F] to-[#E25121] text-white font-bold text-sm shadow-[0_0_20px_rgba(192,2,15,0.3)] hover:shadow-[0_0_28px_rgba(226,81,33,0.4)] transition-all duration-300"
               >
                 <span>Explore Battery Storage (BESS)</span>
                 <ArrowRight className="w-4 h-4" />
